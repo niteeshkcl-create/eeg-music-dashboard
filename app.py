@@ -845,6 +845,165 @@ tab1, tab3, tab4, tab5, tab6 = st.tabs(
 # =====================================================
 # TAB 1 – Individual Subject Topomaps
 # =====================================================
+# with tab1:
+#     st.header("Individual Subject Topomaps")
+
+#     df1 = load_tab1_data()
+#     subjects = sorted(df1["subject"].unique())
+#     task_keys = list(TASK_OPTIONS.keys())
+
+#     col1, col2 = st.columns(2)
+#     with col1:
+#         subj = st.selectbox("Subject", subjects)
+#     with col2:
+#         music_key = st.selectbox("Music Type", task_keys)
+
+#     if st.button("Show Topomaps", type="primary"):
+#         sub_df = df1[(df1["subject"] == subj) & (df1["task_key"] == music_key)]
+#         if sub_df.empty:
+#             st.error("No data for this subject / music combination.")
+#         else:
+#             # fixed order
+#             band_order = ["Delta", "Alpha", "Beta"]
+
+#             ch_names = sorted(sub_df["channel"].unique())
+#             info = make_info_from_channels(ch_names)
+
+#             # figure: 3 topo axes + 3 colorbar axes + 1 legend axis
+#             from matplotlib.gridspec import GridSpec
+
+#             fig = plt.figure(figsize=(18, 6))
+#             gs = GridSpec(
+#                 nrows=2,
+#                 ncols=7,
+#                 width_ratios=[1, 0.05, 1, 0.05, 1, 0.05, 0.9],
+#                 height_ratios=[0.2, 1.0],
+#                 figure=fig,
+#             )
+
+#             title_ax = fig.add_subplot(gs[0, :])
+#             title_ax.axis("off")
+
+#             # Subject + task title
+#             task_label = dict(zip(TASK_OPTIONS.keys(), TASK_LABELS))[music_key]
+#             title_ax.text(
+#                 0.5,
+#                 0.65,
+#                 f"Subject {subj:>02} - {task_label}",
+#                 ha="center",
+#                 va="center",
+#                 fontsize=18,
+#                 fontweight="bold",
+#                 color="white",
+#             )
+#             title_ax.text(
+#                 0.5,
+#                 0.15,
+#                 "Brain Activity Patterns Across Regions",
+#                 ha="center",
+#                 va="center",
+#                 fontsize=14,
+#                 color="white",
+#             )
+
+#             topo_axes = [
+#                 fig.add_subplot(gs[1, 0]),
+#                 fig.add_subplot(gs[1, 2]),
+#                 fig.add_subplot(gs[1, 4]),
+#             ]
+#             cbar_axes = [
+#                 fig.add_subplot(gs[1, 1]),
+#                 fig.add_subplot(gs[1, 3]),
+#                 fig.add_subplot(gs[1, 5]),
+#             ]
+#             legend_ax = fig.add_subplot(gs[1, 6])
+
+#             # ----- draw the three bands with their own colorbars -----
+#             for idx, (band, ax, cax) in enumerate(zip(band_order, topo_axes, cbar_axes)):
+#                 band_df = sub_df[sub_df["band"] == band]
+#                 band_df = band_df.set_index("channel").reindex(ch_names)
+#                 vals = band_df["power"].to_numpy()
+
+#                 im, _ = mne.viz.plot_topomap(
+#                     vals,
+#                     info,
+#                     axes=ax,
+#                     show=False,
+#                     cmap=FREQUENCY_BANDS_SUBJECT[band]["cmap"],
+#                     contours=6,
+#                     extrapolate="head",
+#                     sphere=(0.0, 0.0, 0.09, 0.2),
+#                 )
+
+#                 # band-specific title like your figure
+#                 if band == "Delta":
+#                     t = "Delta Band (1–4 Hz)\nSleep/Deep Relaxation"
+#                 elif band == "Alpha":
+#                     t = "Alpha Band (8–13 Hz)\nCalm/Relaxation"
+#                 else:
+#                     t = "Beta Band (13–30 Hz)\nAnxiety/Alertness"
+#                 ax.set_title(t, fontsize=12, fontweight="bold", color="white")
+
+#                 # individual colorbar
+#                 cbar = fig.colorbar(im, cax=cax)
+#                 cbar.ax.tick_params(colors="white", labelsize=8)
+#                 cbar.set_label("Power (µV²/Hz)", color="white", fontsize=9)
+
+
+#             # ----- brain regions guide on the right -----
+#             legend_ax.axis("off")
+#             legend_ax.set_facecolor("#000000")
+#             legend_ax.text(
+#                 0.0,
+#                 1.02,
+#                 "Brain Regions Guide",
+#                 fontsize=13,
+#                 fontweight="bold",
+#                 color="white",
+#                 transform=legend_ax.transAxes,
+#             )
+
+#             regions = [
+#                 ("Frontal (Front)", "Executive function\nDecision making\nPlanning"),
+#                 ("Temporal (Sides)", "Auditory processing\nMusic perception\nMemory"),
+#                 ("Parietal (Top-Back)", "Sensory integration\nSpatial awareness"),
+#                 ("Occipital (Back)", "Visual processing"),
+#                 ("Central", "Motor control\nSensorimotor"),
+#             ]
+
+#             y = 0.9
+#             dy = 0.18
+#             for title, desc in regions:
+#                 legend_ax.text(
+#                     0.0,
+#                     y,
+#                     title,
+#                     fontsize=11,
+#                     fontweight="bold",
+#                     color="#003399",
+#                     transform=legend_ax.transAxes,
+#                     va="top",
+#                 )
+#                 legend_ax.text(
+#                     0.0,
+#                     y - 0.05,
+#                     desc,
+#                     fontsize=9,
+#                     color="white",
+#                     transform=legend_ax.transAxes,
+#                     va="top",
+#                 )
+#                 y -= dy
+
+#             # dark theme
+#             fig.patch.set_facecolor("#000000")
+#             for ax in topo_axes:
+#                 ax.set_facecolor("#000000")
+#                 ax.tick_params(colors="white")
+
+#             plt.tight_layout()
+#             st.pyplot(fig)
+
 with tab1:
     st.header("Individual Subject Topomaps")
 
@@ -865,61 +1024,34 @@ with tab1:
         else:
             # fixed order
             band_order = ["Delta", "Alpha", "Beta"]
-
             ch_names = sorted(sub_df["channel"].unique())
             info = make_info_from_channels(ch_names)
 
-            # figure: 3 topo axes + 3 colorbar axes + 1 legend axis
             from matplotlib.gridspec import GridSpec
 
-            fig = plt.figure(figsize=(18, 6))
+            # single row: 3 heads + 3 colorbars + legend
+            fig = plt.figure(figsize=(18, 5))
             gs = GridSpec(
-                nrows=2,
+                nrows=1,
                 ncols=7,
                 width_ratios=[1, 0.05, 1, 0.05, 1, 0.05, 0.9],
-                height_ratios=[0.2, 1.0],
                 figure=fig,
             )
 
-            title_ax = fig.add_subplot(gs[0, :])
-            title_ax.axis("off")
-
-            # Subject + task title
-            task_label = dict(zip(TASK_OPTIONS.keys(), TASK_LABELS))[music_key]
-            title_ax.text(
-                0.5,
-                0.65,
-                f"Subject {subj:>02} - {task_label}",
-                ha="center",
-                va="center",
-                fontsize=18,
-                fontweight="bold",
-                color="white",
-            )
-            title_ax.text(
-                0.5,
-                0.15,
-                "Brain Activity Patterns Across Regions",
-                ha="center",
-                va="center",
-                fontsize=14,
-                color="white",
-            )
-
             topo_axes = [
-                fig.add_subplot(gs[1, 0]),
-                fig.add_subplot(gs[1, 2]),
-                fig.add_subplot(gs[1, 4]),
+                fig.add_subplot(gs[0, 0]),
+                fig.add_subplot(gs[0, 2]),
+                fig.add_subplot(gs[0, 4]),
             ]
             cbar_axes = [
-                fig.add_subplot(gs[1, 1]),
-                fig.add_subplot(gs[1, 3]),
-                fig.add_subplot(gs[1, 5]),
+                fig.add_subplot(gs[0, 1]),
+                fig.add_subplot(gs[0, 3]),
+                fig.add_subplot(gs[0, 5]),
             ]
-            legend_ax = fig.add_subplot(gs[1, 6])
+            legend_ax = fig.add_subplot(gs[0, 6])
 
             # ----- draw the three bands with their own colorbars -----
-            for idx, (band, ax, cax) in enumerate(zip(band_order, topo_axes, cbar_axes)):
+            for band, ax, cax in zip(band_order, topo_axes, cbar_axes):
                 band_df = sub_df[sub_df["band"] == band]
                 band_df = band_df.set_index("channel").reindex(ch_names)
                 vals = band_df["power"].to_numpy()
@@ -935,7 +1067,7 @@ with tab1:
                     sphere=(0.0, 0.0, 0.09, 0.2),
                 )
 
-                # band-specific title like your figure
+                # band-specific title
                 if band == "Delta":
                     t = "Delta Band (1–4 Hz)\nSleep/Deep Relaxation"
                 elif band == "Alpha":
@@ -948,49 +1080,6 @@ with tab1:
                 cbar = fig.colorbar(im, cax=cax)
                 cbar.ax.tick_params(colors="white", labelsize=8)
                 cbar.set_label("Power (µV²/Hz)", color="white", fontsize=9)
-
-                # # add region labels only on beta map (rightmost)
-                # if band == "Beta":
-                #     ax.text(
-                #         0.5,
-                #         1.05,
-                #         "Front\n(Frontal)",
-                #         ha="center",
-                #         va="bottom",
-                #         fontsize=9,
-                #         bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.9),
-                #         transform=ax.transAxes,
-                #     )
-                #     ax.text(
-                #         0.0,
-                #         0.5,
-                #         "Left\n(Temporal)",
-                #         ha="right",
-                #         va="center",
-                #         fontsize=9,
-                #         bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.9),
-                #         transform=ax.transAxes,
-                #     )
-                #     ax.text(
-                #         1.0,
-                #         0.5,
-                #         "Right\n(Temporal)",
-                #         ha="left",
-                #         va="center",
-                #         fontsize=9,
-                #         bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.9),
-                #         transform=ax.transAxes,
-                #     )
-                #     ax.text(
-                #         0.5,
-                #         -0.10,
-                #         "Back\n(Occipital)",
-                #         ha="center",
-                #         va="top",
-                #         fontsize=9,
-                #         bbox=dict(boxstyle="round,pad=0.3", fc="white", alpha=0.9),
-                #         transform=ax.transAxes,
-                #     )
 
             # ----- brain regions guide on the right -----
             legend_ax.axis("off")
@@ -1045,6 +1134,7 @@ with tab1:
 
             plt.tight_layout()
             st.pyplot(fig)
+
 
 
 # =====================================================
