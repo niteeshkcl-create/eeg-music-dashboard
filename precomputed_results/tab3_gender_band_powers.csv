@@ -1,0 +1,193 @@
+gender,band,task_bids,task_label,power
+F,Theta,classicalMusic,Classical Music,6.00890507452014e-11
+F,Theta,classicalMusic,Classical Music,4.8807165616792583e-11
+F,Theta,classicalMusic,Classical Music,4.286554509430186e-11
+F,Theta,classicalMusic,Classical Music,1.2498968722720564e-11
+F,Theta,classicalMusic,Classical Music,6.7116276973475335e-12
+F,Theta,classicalMusic,Classical Music,1.765253880532619e-11
+F,Theta,genMusic01,Generative Music 1,4.501042689596716e-12
+F,Theta,genMusic01,Generative Music 1,3.209766695540648e-11
+F,Theta,genMusic01,Generative Music 1,9.480762813738526e-11
+F,Theta,genMusic01,Generative Music 1,4.199981624655157e-11
+F,Theta,genMusic01,Generative Music 1,1.6769705181991407e-11
+F,Theta,genMusic01,Generative Music 1,1.536672308792778e-11
+F,Theta,genMusic01,Generative Music 1,2.7372269237699877e-11
+F,Theta,genMusic02,Generative Music 2,2.497850833708875e-10
+F,Theta,genMusic02,Generative Music 2,2.3031880161818497e-09
+F,Theta,genMusic02,Generative Music 2,3.343985365157924e-11
+F,Theta,genMusic02,Generative Music 2,1.0528699576695616e-11
+F,Theta,genMusic02,Generative Music 2,6.668188356929184e-11
+F,Theta,genMusic02,Generative Music 2,2.9529013851438775e-11
+F,Theta,genMusic02,Generative Music 2,7.650493291603677e-12
+F,Theta,genMusic02,Generative Music 2,1.5188321266466927e-11
+F,Theta,genMusic02,Generative Music 2,3.345536766526292e-11
+F,Theta,genMusic03,Generative Music 3,1.5694921217280648e-10
+F,Theta,genMusic03,Generative Music 3,6.124547305808824e-11
+F,Theta,genMusic03,Generative Music 3,3.650601018270566e-11
+F,Theta,genMusic03,Generative Music 3,1.2304152491018402e-10
+F,Theta,genMusic03,Generative Music 3,1.6733887725731054e-11
+F,Theta,genMusic03,Generative Music 3,4.120437913566191e-11
+F,Theta,genMusic03,Generative Music 3,1.0429082616238444e-11
+F,Alpha,classicalMusic,Classical Music,2.138050121141795e-11
+F,Alpha,classicalMusic,Classical Music,1.7412280507836356e-11
+F,Alpha,classicalMusic,Classical Music,3.685116311637686e-12
+F,Alpha,classicalMusic,Classical Music,1.1655875955802257e-11
+F,Alpha,classicalMusic,Classical Music,3.5348838627574917e-12
+F,Alpha,classicalMusic,Classical Music,3.806888840753567e-12
+F,Alpha,genMusic01,Generative Music 1,1.1395436076730749e-12
+F,Alpha,genMusic01,Generative Music 1,9.359934849105916e-12
+F,Alpha,genMusic01,Generative Music 1,8.768172104886108e-12
+F,Alpha,genMusic01,Generative Music 1,6.314822564651288e-12
+F,Alpha,genMusic01,Generative Music 1,2.114578355050321e-11
+F,Alpha,genMusic01,Generative Music 1,1.20640726128598e-11
+F,Alpha,genMusic01,Generative Music 1,7.085039192605665e-12
+F,Alpha,genMusic02,Generative Music 2,1.7250308604900263e-10
+F,Alpha,genMusic02,Generative Music 2,7.9759622020021e-10
+F,Alpha,genMusic02,Generative Music 2,1.577022852637227e-11
+F,Alpha,genMusic02,Generative Music 2,1.3059888017582496e-11
+F,Alpha,genMusic02,Generative Music 2,4.203489690256395e-12
+F,Alpha,genMusic02,Generative Music 2,1.7083010745368934e-11
+F,Alpha,genMusic02,Generative Music 2,4.386209772900944e-12
+F,Alpha,genMusic02,Generative Music 2,3.4431227654500027e-12
+F,Alpha,genMusic02,Generative Music 2,2.6196065844181776e-11
+F,Alpha,genMusic03,Generative Music 3,9.550909033312411e-11
+F,Alpha,genMusic03,Generative Music 3,7.631066542666702e-12
+F,Alpha,genMusic03,Generative Music 3,8.345235958449256e-12
+F,Alpha,genMusic03,Generative Music 3,4.758152496922323e-12
+F,Alpha,genMusic03,Generative Music 3,1.4281366885049464e-11
+F,Alpha,genMusic03,Generative Music 3,3.059158479484605e-11
+F,Alpha,genMusic03,Generative Music 3,2.8742504920755197e-12
+F,Beta,classicalMusic,Classical Music,3.367079240823623e-11
+F,Beta,classicalMusic,Classical Music,1.8464742384764625e-10
+F,Beta,classicalMusic,Classical Music,1.3057964679406348e-12
+F,Beta,classicalMusic,Classical Music,1.3747552313016574e-12
+F,Beta,classicalMusic,Classical Music,1.0084371831761124e-12
+F,Beta,classicalMusic,Classical Music,4.187220339067493e-11
+F,Beta,genMusic01,Generative Music 1,2.8866348493253957e-13
+F,Beta,genMusic01,Generative Music 1,7.9173937395802e-13
+F,Beta,genMusic01,Generative Music 1,1.5632117932792652e-12
+F,Beta,genMusic01,Generative Music 1,1.0022289827993996e-12
+F,Beta,genMusic01,Generative Music 1,1.1990580178709954e-12
+F,Beta,genMusic01,Generative Music 1,1.349359581094567e-12
+F,Beta,genMusic01,Generative Music 1,7.994905543310886e-13
+F,Beta,genMusic02,Generative Music 2,5.009075994761697e-10
+F,Beta,genMusic02,Generative Music 2,4.552375223582236e-11
+F,Beta,genMusic02,Generative Music 2,2.118424827179698e-11
+F,Beta,genMusic02,Generative Music 2,1.6399417916831658e-11
+F,Beta,genMusic02,Generative Music 2,6.127733358496785e-13
+F,Beta,genMusic02,Generative Music 2,5.591780049807453e-11
+F,Beta,genMusic02,Generative Music 2,1.4862498596703443e-12
+F,Beta,genMusic02,Generative Music 2,5.99791726289957e-13
+F,Beta,genMusic02,Generative Music 2,7.79408373809501e-12
+F,Beta,genMusic03,Generative Music 3,2.349299943102495e-10
+F,Beta,genMusic03,Generative Music 3,8.858134444114173e-13
+F,Beta,genMusic03,Generative Music 3,4.414437834432363e-11
+F,Beta,genMusic03,Generative Music 3,6.05452741153288e-13
+F,Beta,genMusic03,Generative Music 3,9.544215621303918e-13
+F,Beta,genMusic03,Generative Music 3,3.073773371416672e-12
+F,Beta,genMusic03,Generative Music 3,6.348077379441429e-13
+M,Theta,classicalMusic,Classical Music,8.580127082667676e-11
+M,Theta,classicalMusic,Classical Music,3.5915624142196946e-11
+M,Theta,classicalMusic,Classical Music,1.0012498646633325e-10
+M,Theta,classicalMusic,Classical Music,8.477680739567656e-11
+M,Theta,classicalMusic,Classical Music,3.2842991254117375e-11
+M,Theta,classicalMusic,Classical Music,2.771335143049877e-10
+M,Theta,classicalMusic,Classical Music,4.145087373496197e-11
+M,Theta,classicalMusic,Classical Music,9.673303838994577e-11
+M,Theta,genMusic01,Generative Music 1,5.028184127661761e-11
+M,Theta,genMusic01,Generative Music 1,5.939567151093742e-11
+M,Theta,genMusic01,Generative Music 1,7.242891937161313e-11
+M,Theta,genMusic01,Generative Music 1,3.346864135675142e-11
+M,Theta,genMusic01,Generative Music 1,1.4205227789054343e-10
+M,Theta,genMusic01,Generative Music 1,2.5442132010650895e-11
+M,Theta,genMusic01,Generative Music 1,6.758843179181499e-11
+M,Theta,genMusic01,Generative Music 1,4.7249091970901574e-11
+M,Theta,genMusic01,Generative Music 1,2.8642336245074234e-11
+M,Theta,genMusic02,Generative Music 2,5.918079406164248e-11
+M,Theta,genMusic02,Generative Music 2,4.3109986287010165e-11
+M,Theta,genMusic02,Generative Music 2,8.716948801801582e-11
+M,Theta,genMusic02,Generative Music 2,1.1484939851299302e-10
+M,Theta,genMusic02,Generative Music 2,3.5491427567087306e-11
+M,Theta,genMusic02,Generative Music 2,1.8925737352099306e-11
+M,Theta,genMusic02,Generative Music 2,9.641824417897558e-11
+M,Theta,genMusic02,Generative Music 2,4.965168677570509e-12
+M,Theta,genMusic02,Generative Music 2,9.01920293994208e-11
+M,Theta,genMusic03,Generative Music 3,1.624680842602639e-10
+M,Theta,genMusic03,Generative Music 3,4.4282670921632545e-11
+M,Theta,genMusic03,Generative Music 3,1.272057796130551e-10
+M,Theta,genMusic03,Generative Music 3,6.489081365215311e-10
+M,Theta,genMusic03,Generative Music 3,6.19014709853923e-11
+M,Theta,genMusic03,Generative Music 3,3.094301595097994e-11
+M,Theta,genMusic03,Generative Music 3,3.490431521822713e-11
+M,Theta,genMusic03,Generative Music 3,4.195604074086517e-11
+M,Theta,genMusic03,Generative Music 3,7.780102185390022e-11
+M,Alpha,classicalMusic,Classical Music,3.576766637314704e-11
+M,Alpha,classicalMusic,Classical Music,2.050008725438289e-11
+M,Alpha,classicalMusic,Classical Music,7.779311682160633e-12
+M,Alpha,classicalMusic,Classical Music,6.926307643479704e-12
+M,Alpha,classicalMusic,Classical Music,1.0952331366979971e-11
+M,Alpha,classicalMusic,Classical Music,7.248400993355182e-11
+M,Alpha,classicalMusic,Classical Music,7.443812403303111e-12
+M,Alpha,classicalMusic,Classical Music,5.5374561875886585e-12
+M,Alpha,genMusic01,Generative Music 1,3.619525475961083e-11
+M,Alpha,genMusic01,Generative Music 1,1.312618653079545e-10
+M,Alpha,genMusic01,Generative Music 1,1.439186310098609e-11
+M,Alpha,genMusic01,Generative Music 1,5.0339985001433604e-12
+M,Alpha,genMusic01,Generative Music 1,2.8023792376487972e-11
+M,Alpha,genMusic01,Generative Music 1,9.371684496678704e-12
+M,Alpha,genMusic01,Generative Music 1,8.42189448580086e-12
+M,Alpha,genMusic01,Generative Music 1,3.8813634646614224e-12
+M,Alpha,genMusic01,Generative Music 1,8.459683054050652e-12
+M,Alpha,genMusic02,Generative Music 2,3.129843343024778e-11
+M,Alpha,genMusic02,Generative Music 2,2.8561054704582468e-11
+M,Alpha,genMusic02,Generative Music 2,9.666014999665006e-12
+M,Alpha,genMusic02,Generative Music 2,9.933366278422085e-12
+M,Alpha,genMusic02,Generative Music 2,1.6244795068814075e-11
+M,Alpha,genMusic02,Generative Music 2,5.6806452906912205e-12
+M,Alpha,genMusic02,Generative Music 2,2.1392061558737166e-11
+M,Alpha,genMusic02,Generative Music 2,2.944221921319111e-12
+M,Alpha,genMusic02,Generative Music 2,2.243940449258064e-11
+M,Alpha,genMusic03,Generative Music 3,4.129080285144157e-11
+M,Alpha,genMusic03,Generative Music 3,4.297796903695687e-11
+M,Alpha,genMusic03,Generative Music 3,1.2013166208373179e-11
+M,Alpha,genMusic03,Generative Music 3,6.431502942442258e-11
+M,Alpha,genMusic03,Generative Music 3,9.907851443804629e-12
+M,Alpha,genMusic03,Generative Music 3,5.349550640193242e-12
+M,Alpha,genMusic03,Generative Music 3,1.0367542592240639e-11
+M,Alpha,genMusic03,Generative Music 3,1.1766201602367053e-11
+M,Alpha,genMusic03,Generative Music 3,3.773996408065734e-12
+M,Beta,classicalMusic,Classical Music,5.4014530880686725e-12
+M,Beta,classicalMusic,Classical Music,1.5524884112325735e-11
+M,Beta,classicalMusic,Classical Music,5.556185338608393e-12
+M,Beta,classicalMusic,Classical Music,2.630582803467838e-12
+M,Beta,classicalMusic,Classical Music,1.8562965343093815e-12
+M,Beta,classicalMusic,Classical Music,4.0051445122715316e-12
+M,Beta,classicalMusic,Classical Music,3.8209033852098054e-12
+M,Beta,classicalMusic,Classical Music,5.278019633384749e-10
+M,Beta,genMusic01,Generative Music 1,1.4365303192112953e-12
+M,Beta,genMusic01,Generative Music 1,2.166932180935459e-11
+M,Beta,genMusic01,Generative Music 1,2.2005188267949e-12
+M,Beta,genMusic01,Generative Music 1,8.536145416842935e-13
+M,Beta,genMusic01,Generative Music 1,2.7225941703930143e-12
+M,Beta,genMusic01,Generative Music 1,4.419903763233018e-12
+M,Beta,genMusic01,Generative Music 1,2.3622358958392867e-12
+M,Beta,genMusic01,Generative Music 1,2.8367508613813857e-12
+M,Beta,genMusic01,Generative Music 1,2.685318587437325e-12
+M,Beta,genMusic02,Generative Music 2,1.9872537463680016e-12
+M,Beta,genMusic02,Generative Music 2,2.4348584926121184e-11
+M,Beta,genMusic02,Generative Music 2,2.085045404631153e-12
+M,Beta,genMusic02,Generative Music 2,1.8412010959163088e-12
+M,Beta,genMusic02,Generative Music 2,1.4894935540289661e-12
+M,Beta,genMusic02,Generative Music 2,7.501091162463327e-13
+M,Beta,genMusic02,Generative Music 2,1.7196019895189241e-12
+M,Beta,genMusic02,Generative Music 2,1.411248232905152e-12
+M,Beta,genMusic02,Generative Music 2,4.273477548851286e-11
+M,Beta,genMusic03,Generative Music 3,1.5362721967027494e-12
+M,Beta,genMusic03,Generative Music 3,1.0289798569966688e-11
+M,Beta,genMusic03,Generative Music 3,3.861752648113488e-12
+M,Beta,genMusic03,Generative Music 3,6.155004198569179e-12
+M,Beta,genMusic03,Generative Music 3,1.321246245192854e-12
+M,Beta,genMusic03,Generative Music 3,9.305063961674923e-13
+M,Beta,genMusic03,Generative Music 3,1.0039449334776253e-12
+M,Beta,genMusic03,Generative Music 3,1.4463748710679505e-12
+M,Beta,genMusic03,Generative Music 3,3.1342081659241598e-12

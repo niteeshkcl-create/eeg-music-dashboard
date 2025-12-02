@@ -1,0 +1,373 @@
+task_bids,window,channel,theta_power
+classicalMusic,5s Before Onset,Fp1,8.327161108486096e-11
+classicalMusic,5s Before Onset,Fp2,4.999992143816738e-11
+classicalMusic,5s Before Onset,F3,7.165818377246638e-11
+classicalMusic,5s Before Onset,F4,4.625069027709093e-11
+classicalMusic,5s Before Onset,C3,5.7633403312526005e-11
+classicalMusic,5s Before Onset,C4,5.172218366134934e-11
+classicalMusic,5s Before Onset,P3,2.885080616496232e-11
+classicalMusic,5s Before Onset,P4,3.8723164981256916e-11
+classicalMusic,5s Before Onset,O1,4.709356058258096e-11
+classicalMusic,5s Before Onset,O2,5.093452261383153e-11
+classicalMusic,5s Before Onset,F7,1.7802302903012145e-10
+classicalMusic,5s Before Onset,F8,1.616524011098842e-10
+classicalMusic,5s Before Onset,T7,1.8493730473839736e-10
+classicalMusic,5s Before Onset,T8,2.0214748183300987e-10
+classicalMusic,5s Before Onset,P7,1.5180996428787702e-10
+classicalMusic,5s Before Onset,P8,1.5913824842599453e-10
+classicalMusic,5s Before Onset,Fz,1.0271395390277246e-11
+classicalMusic,5s Before Onset,Cz,4.308032959456313e-12
+classicalMusic,5s Before Onset,Pz,5.035966253337925e-12
+classicalMusic,5s Before Onset,Oz,4.369342282924357e-11
+classicalMusic,5s Before Onset,FC1,2.028993316290215e-11
+classicalMusic,5s Before Onset,FC2,1.2567676135132024e-11
+classicalMusic,5s Before Onset,CP1,1.6258641587685457e-11
+classicalMusic,5s Before Onset,CP2,1.68870373953322e-11
+classicalMusic,5s Before Onset,FC5,1.4795004917225924e-10
+classicalMusic,5s Before Onset,FC6,1.0374620211402556e-10
+classicalMusic,5s Before Onset,CP5,9.180064227561324e-11
+classicalMusic,5s Before Onset,CP6,9.277794832473413e-11
+classicalMusic,5s Before Onset,TP9,1.397902784180774e-10
+classicalMusic,5s Before Onset,TP10,2.7540984558611264e-10
+classicalMusic,5s Before Onset,POz,2.3128755316202417e-11
+classicalMusic,At Onset,Fp1,4.8034481082614305e-11
+classicalMusic,At Onset,Fp2,2.8917010918741963e-11
+classicalMusic,At Onset,F3,3.2470855096818506e-11
+classicalMusic,At Onset,F4,3.484792557793526e-11
+classicalMusic,At Onset,C3,2.5776910726206876e-11
+classicalMusic,At Onset,C4,2.0379991232764314e-11
+classicalMusic,At Onset,P3,1.4082709579271752e-11
+classicalMusic,At Onset,P4,1.7598405134765018e-11
+classicalMusic,At Onset,O1,2.6922073560279385e-11
+classicalMusic,At Onset,O2,3.2200698461373116e-11
+classicalMusic,At Onset,F7,9.400127208356983e-11
+classicalMusic,At Onset,F8,7.535490810081496e-11
+classicalMusic,At Onset,T7,6.515887201198106e-11
+classicalMusic,At Onset,T8,7.960993870186013e-11
+classicalMusic,At Onset,P7,5.851023580951485e-11
+classicalMusic,At Onset,P8,7.497860092419369e-11
+classicalMusic,At Onset,Fz,9.69015596973664e-12
+classicalMusic,At Onset,Cz,4.320469816972288e-12
+classicalMusic,At Onset,Pz,4.7894652395356235e-12
+classicalMusic,At Onset,Oz,3.24321604122088e-11
+classicalMusic,At Onset,FC1,1.2289441424969391e-11
+classicalMusic,At Onset,FC2,6.453106081835646e-12
+classicalMusic,At Onset,CP1,7.952791654744826e-12
+classicalMusic,At Onset,CP2,7.87745261791844e-12
+classicalMusic,At Onset,FC5,5.611148435579869e-11
+classicalMusic,At Onset,FC6,4.6128755140274004e-11
+classicalMusic,At Onset,CP5,3.060726745917086e-11
+classicalMusic,At Onset,CP6,3.77433810068312e-11
+classicalMusic,At Onset,TP9,9.05384806766841e-11
+classicalMusic,At Onset,TP10,1.2381715578165762e-10
+classicalMusic,At Onset,POz,1.297886922632518e-11
+classicalMusic,5s After Onset,Fp1,7.119247023236462e-11
+classicalMusic,5s After Onset,Fp2,4.4283426698287424e-11
+classicalMusic,5s After Onset,F3,5.777591112277624e-11
+classicalMusic,5s After Onset,F4,4.8167624689548885e-11
+classicalMusic,5s After Onset,C3,4.639277993576226e-11
+classicalMusic,5s After Onset,C4,4.145145166697429e-11
+classicalMusic,5s After Onset,P3,2.991761923114181e-11
+classicalMusic,5s After Onset,P4,3.065947959177077e-11
+classicalMusic,5s After Onset,O1,2.9054740598205534e-11
+classicalMusic,5s After Onset,O2,4.21463832614282e-11
+classicalMusic,5s After Onset,F7,1.7193512544055577e-10
+classicalMusic,5s After Onset,F8,1.3221546628309085e-10
+classicalMusic,5s After Onset,T7,1.3747934753704013e-10
+classicalMusic,5s After Onset,T8,1.5271756633109977e-10
+classicalMusic,5s After Onset,P7,1.0237304892437311e-10
+classicalMusic,5s After Onset,P8,1.2655181113988489e-10
+classicalMusic,5s After Onset,Fz,9.176672385627176e-12
+classicalMusic,5s After Onset,Cz,4.024267291472022e-12
+classicalMusic,5s After Onset,Pz,5.403919638400565e-12
+classicalMusic,5s After Onset,Oz,3.57665831658711e-11
+classicalMusic,5s After Onset,FC1,1.773538571616835e-11
+classicalMusic,5s After Onset,FC2,8.672341060326799e-12
+classicalMusic,5s After Onset,CP1,1.4719847068123985e-11
+classicalMusic,5s After Onset,CP2,1.102033204172284e-11
+classicalMusic,5s After Onset,FC5,1.1474403430726758e-10
+classicalMusic,5s After Onset,FC6,8.683334453558946e-11
+classicalMusic,5s After Onset,CP5,6.446688813688045e-11
+classicalMusic,5s After Onset,CP6,7.03651209607375e-11
+classicalMusic,5s After Onset,TP9,1.5480964652763354e-10
+classicalMusic,5s After Onset,TP10,2.0979751700422206e-10
+classicalMusic,5s After Onset,POz,1.71158545538076e-11
+genMusic01,5s Before Onset,Fp1,6.723372249179064e-11
+genMusic01,5s Before Onset,Fp2,4.2127439166083135e-11
+genMusic01,5s Before Onset,F3,4.1069295374256214e-11
+genMusic01,5s Before Onset,F4,2.4692219772637398e-11
+genMusic01,5s Before Onset,C3,2.8563721687541234e-11
+genMusic01,5s Before Onset,C4,2.1808325269964425e-11
+genMusic01,5s Before Onset,P3,1.5405649642377355e-11
+genMusic01,5s Before Onset,P4,2.0816210907255362e-11
+genMusic01,5s Before Onset,O1,2.6488754126876428e-11
+genMusic01,5s Before Onset,O2,3.380021839441768e-11
+genMusic01,5s Before Onset,F7,1.1503060911093955e-10
+genMusic01,5s Before Onset,F8,8.133370548055699e-11
+genMusic01,5s Before Onset,T7,7.751762637401117e-11
+genMusic01,5s Before Onset,T8,9.541658516550803e-11
+genMusic01,5s Before Onset,P7,7.975005376943059e-11
+genMusic01,5s Before Onset,P8,8.326123636432195e-11
+genMusic01,5s Before Onset,Fz,8.736549754760297e-12
+genMusic01,5s Before Onset,Cz,3.4999080730315822e-12
+genMusic01,5s Before Onset,Pz,5.315122214190179e-12
+genMusic01,5s Before Onset,Oz,3.088005346764484e-11
+genMusic01,5s Before Onset,FC1,1.4225575688900447e-11
+genMusic01,5s Before Onset,FC2,6.823968847064485e-12
+genMusic01,5s Before Onset,CP1,7.343469600142209e-12
+genMusic01,5s Before Onset,CP2,6.738315877611826e-12
+genMusic01,5s Before Onset,FC5,8.211570728932814e-11
+genMusic01,5s Before Onset,FC6,5.0614915251522076e-11
+genMusic01,5s Before Onset,CP5,3.6675909273248084e-11
+genMusic01,5s Before Onset,CP6,4.620164062180299e-11
+genMusic01,5s Before Onset,TP9,1.0196972743707724e-10
+genMusic01,5s Before Onset,TP10,1.341057312287884e-10
+genMusic01,5s Before Onset,POz,1.2443181815729197e-11
+genMusic01,At Onset,Fp1,7.102008121270671e-11
+genMusic01,At Onset,Fp2,8.489616569457663e-11
+genMusic01,At Onset,F3,2.8921457668825e-11
+genMusic01,At Onset,F4,2.5076846319116662e-11
+genMusic01,At Onset,C3,1.4037042190527205e-11
+genMusic01,At Onset,C4,1.3944482993245303e-11
+genMusic01,At Onset,P3,1.4458781096142117e-11
+genMusic01,At Onset,P4,1.6527778444218446e-11
+genMusic01,At Onset,O1,3.4286488507826645e-11
+genMusic01,At Onset,O2,3.369193484546346e-11
+genMusic01,At Onset,F7,5.210706693687345e-11
+genMusic01,At Onset,F8,4.784970699308805e-11
+genMusic01,At Onset,T7,4.508491519060878e-11
+genMusic01,At Onset,T8,4.765801164074745e-11
+genMusic01,At Onset,P7,8.579068359111551e-11
+genMusic01,At Onset,P8,4.787912044668676e-11
+genMusic01,At Onset,Fz,9.530056736497044e-12
+genMusic01,At Onset,Cz,4.7909884318500715e-12
+genMusic01,At Onset,Pz,1.4453257836718382e-11
+genMusic01,At Onset,Oz,4.312338526176809e-11
+genMusic01,At Onset,FC1,9.441492891982259e-12
+genMusic01,At Onset,FC2,6.278784748437453e-12
+genMusic01,At Onset,CP1,1.660921446430528e-11
+genMusic01,At Onset,CP2,1.593221231154448e-11
+genMusic01,At Onset,FC5,4.003211742680448e-11
+genMusic01,At Onset,FC6,3.368200835637352e-11
+genMusic01,At Onset,CP5,4.90827442241875e-11
+genMusic01,At Onset,CP6,4.137640528302581e-11
+genMusic01,At Onset,TP9,1.0309383076873197e-10
+genMusic01,At Onset,TP10,9.580415203727547e-11
+genMusic01,At Onset,POz,5.126658378036163e-11
+genMusic01,5s After Onset,Fp1,8.228966962616359e-11
+genMusic01,5s After Onset,Fp2,4.8908067179223955e-11
+genMusic01,5s After Onset,F3,4.4339346850992935e-11
+genMusic01,5s After Onset,F4,2.1887000708707706e-11
+genMusic01,5s After Onset,C3,2.8548474135844588e-11
+genMusic01,5s After Onset,C4,2.27542652982486e-11
+genMusic01,5s After Onset,P3,1.445480547092694e-11
+genMusic01,5s After Onset,P4,2.5386315274732936e-11
+genMusic01,5s After Onset,O1,2.5650215214255238e-11
+genMusic01,5s After Onset,O2,3.8601558904241484e-11
+genMusic01,5s After Onset,F7,1.2150172275285186e-10
+genMusic01,5s After Onset,F8,8.531986039749091e-11
+genMusic01,5s After Onset,T7,7.78847599206651e-11
+genMusic01,5s After Onset,T8,1.0189541556689747e-10
+genMusic01,5s After Onset,P7,6.51160051941485e-11
+genMusic01,5s After Onset,P8,8.875830784044079e-11
+genMusic01,5s After Onset,Fz,9.388918824286713e-12
+genMusic01,5s After Onset,Cz,3.761002594332885e-12
+genMusic01,5s After Onset,Pz,5.9473145701789655e-12
+genMusic01,5s After Onset,Oz,3.339694691049504e-11
+genMusic01,5s After Onset,FC1,1.4581160335894233e-11
+genMusic01,5s After Onset,FC2,6.40341273124354e-12
+genMusic01,5s After Onset,CP1,7.28901961080224e-12
+genMusic01,5s After Onset,CP2,8.463616001568807e-12
+genMusic01,5s After Onset,FC5,8.25808567952039e-11
+genMusic01,5s After Onset,FC6,5.190291551582755e-11
+genMusic01,5s After Onset,CP5,3.658912989655225e-11
+genMusic01,5s After Onset,CP6,5.152094713197013e-11
+genMusic01,5s After Onset,TP9,9.830264233661567e-11
+genMusic01,5s After Onset,TP10,1.540261631929357e-10
+genMusic01,5s After Onset,POz,1.4012040954095933e-11
+genMusic02,5s Before Onset,Fp1,1.9808565994999012e-10
+genMusic02,5s Before Onset,Fp2,1.7480967455844012e-10
+genMusic02,5s Before Onset,F3,1.0414494483697518e-10
+genMusic02,5s Before Onset,F4,1.1217628814628457e-10
+genMusic02,5s Before Onset,C3,7.75652549651858e-11
+genMusic02,5s Before Onset,C4,5.644691505198845e-11
+genMusic02,5s Before Onset,P3,6.659748986032013e-11
+genMusic02,5s Before Onset,P4,5.199524431881814e-11
+genMusic02,5s Before Onset,O1,1.6071621060079246e-10
+genMusic02,5s Before Onset,O2,1.385967401373975e-10
+genMusic02,5s Before Onset,F7,2.838433788000793e-10
+genMusic02,5s Before Onset,F8,2.195351099894863e-10
+genMusic02,5s Before Onset,T7,1.70096921252256e-10
+genMusic02,5s Before Onset,T8,2.0157784123931535e-10
+genMusic02,5s Before Onset,P7,1.6892797914783355e-10
+genMusic02,5s Before Onset,P8,2.889535352308362e-10
+genMusic02,5s Before Onset,Fz,5.6007287068919907e-11
+genMusic02,5s Before Onset,Cz,1.4519846873717363e-11
+genMusic02,5s Before Onset,Pz,2.2217249721712742e-11
+genMusic02,5s Before Onset,Oz,1.6064360949410298e-10
+genMusic02,5s Before Onset,FC1,3.218657352529625e-11
+genMusic02,5s Before Onset,FC2,4.449884432973843e-11
+genMusic02,5s Before Onset,CP1,2.367694557413163e-11
+genMusic02,5s Before Onset,CP2,2.170233752580029e-11
+genMusic02,5s Before Onset,FC5,1.594470076505319e-10
+genMusic02,5s Before Onset,FC6,1.3289731476964582e-10
+genMusic02,5s Before Onset,CP5,9.470265270166861e-11
+genMusic02,5s Before Onset,CP6,9.931593991790179e-11
+genMusic02,5s Before Onset,TP9,4.0334965091949293e-10
+genMusic02,5s Before Onset,TP10,1.349115854086826e-09
+genMusic02,5s Before Onset,POz,9.312483310928469e-11
+genMusic02,At Onset,Fp1,1.0070364233775326e-10
+genMusic02,At Onset,Fp2,9.403044041533614e-11
+genMusic02,At Onset,F3,4.695761688525738e-11
+genMusic02,At Onset,F4,6.800224673997069e-11
+genMusic02,At Onset,C3,3.7329496165381757e-11
+genMusic02,At Onset,C4,3.417751722622789e-11
+genMusic02,At Onset,P3,2.7356462045324553e-11
+genMusic02,At Onset,P4,2.7433721770973356e-11
+genMusic02,At Onset,O1,5.94818091486512e-11
+genMusic02,At Onset,O2,6.427370179219302e-11
+genMusic02,At Onset,F7,1.5661179811130946e-10
+genMusic02,At Onset,F8,1.5922622756834882e-10
+genMusic02,At Onset,T7,9.366279943350353e-11
+genMusic02,At Onset,T8,1.3370995868535461e-10
+genMusic02,At Onset,P7,7.525668823034928e-11
+genMusic02,At Onset,P8,1.483458810545927e-10
+genMusic02,At Onset,Fz,1.4232672766224735e-11
+genMusic02,At Onset,Cz,5.541587818634217e-12
+genMusic02,At Onset,Pz,8.17459540096425e-11
+genMusic02,At Onset,Oz,7.46232857298365e-11
+genMusic02,At Onset,FC1,1.5411486189707266e-11
+genMusic02,At Onset,FC2,1.2044007547391605e-11
+genMusic02,At Onset,CP1,1.3455824099592781e-11
+genMusic02,At Onset,CP2,1.6562438162040705e-11
+genMusic02,At Onset,FC5,8.742062565222938e-11
+genMusic02,At Onset,FC6,6.626657238359271e-11
+genMusic02,At Onset,CP5,1.7911193448684522e-10
+genMusic02,At Onset,CP6,6.151630971622577e-11
+genMusic02,At Onset,TP9,1.744648231008707e-10
+genMusic02,At Onset,TP10,2.950589243463904e-10
+genMusic02,At Onset,POz,2.0712950877882272e-11
+genMusic02,5s After Onset,Fp1,5.459328295792525e-10
+genMusic02,5s After Onset,Fp2,3.6113566463658314e-10
+genMusic02,5s After Onset,F3,8.91810287252735e-11
+genMusic02,5s After Onset,F4,9.185477006030886e-11
+genMusic02,5s After Onset,C3,5.0472951666410757e-11
+genMusic02,5s After Onset,C4,3.5865543466392896e-11
+genMusic02,5s After Onset,P3,6.78180198413118e-11
+genMusic02,5s After Onset,P4,4.554136418059765e-11
+genMusic02,5s After Onset,O1,1.847662192532034e-10
+genMusic02,5s After Onset,O2,1.6435691647430016e-10
+genMusic02,5s After Onset,F7,4.5669848418932646e-10
+genMusic02,5s After Onset,F8,2.729015215233963e-10
+genMusic02,5s After Onset,T7,1.7559506870602227e-10
+genMusic02,5s After Onset,T8,1.7490590548672447e-10
+genMusic02,5s After Onset,P7,2.284794880271092e-10
+genMusic02,5s After Onset,P8,2.0182732412117043e-10
+genMusic02,5s After Onset,Fz,4.4929144377835144e-11
+genMusic02,5s After Onset,Cz,2.5527704578324492e-11
+genMusic02,5s After Onset,Pz,2.1541102702514297e-11
+genMusic02,5s After Onset,Oz,1.9841684111333871e-10
+genMusic02,5s After Onset,FC1,3.3758516689563076e-11
+genMusic02,5s After Onset,FC2,2.1992820992163527e-11
+genMusic02,5s After Onset,CP1,2.3661572459513905e-11
+genMusic02,5s After Onset,CP2,1.8497457979809278e-11
+genMusic02,5s After Onset,FC5,1.5982487313507214e-10
+genMusic02,5s After Onset,FC6,1.3526610009871112e-10
+genMusic02,5s After Onset,CP5,1.264831458587445e-10
+genMusic02,5s After Onset,CP6,7.40865737143719e-11
+genMusic02,5s After Onset,TP9,1.097903483956897e-09
+genMusic02,5s After Onset,TP10,4.867125902484272e-10
+genMusic02,5s After Onset,POz,6.696603887269875e-11
+genMusic03,5s Before Onset,Fp1,1.1018812342426225e-10
+genMusic03,5s Before Onset,Fp2,3.382027062235282e-10
+genMusic03,5s Before Onset,F3,6.637021014080015e-11
+genMusic03,5s Before Onset,F4,6.421762071140591e-11
+genMusic03,5s Before Onset,C3,4.919354756029003e-11
+genMusic03,5s Before Onset,C4,3.919427304230045e-11
+genMusic03,5s Before Onset,P3,4.7449760078444166e-11
+genMusic03,5s Before Onset,P4,3.132578602255548e-11
+genMusic03,5s Before Onset,O1,5.688227767552136e-11
+genMusic03,5s Before Onset,O2,6.469893826242816e-11
+genMusic03,5s Before Onset,F7,2.1392091862870325e-10
+genMusic03,5s Before Onset,F8,1.5666149181699662e-10
+genMusic03,5s Before Onset,T7,1.249995786305777e-10
+genMusic03,5s Before Onset,T8,1.3613033607131523e-10
+genMusic03,5s Before Onset,P7,9.114398800911606e-11
+genMusic03,5s Before Onset,P8,1.3069430574860938e-10
+genMusic03,5s Before Onset,Fz,1.316824938330242e-11
+genMusic03,5s Before Onset,Cz,4.834018686735243e-12
+genMusic03,5s Before Onset,Pz,7.819711832239239e-12
+genMusic03,5s Before Onset,Oz,6.459260135075287e-11
+genMusic03,5s Before Onset,FC1,2.0093659780710166e-11
+genMusic03,5s Before Onset,FC2,1.693347465750238e-10
+genMusic03,5s Before Onset,CP1,2.597887018125856e-11
+genMusic03,5s Before Onset,CP2,1.773118814473078e-11
+genMusic03,5s Before Onset,FC5,1.21556226597151e-10
+genMusic03,5s Before Onset,FC6,8.758878285014741e-11
+genMusic03,5s Before Onset,CP5,5.6702840964744244e-11
+genMusic03,5s Before Onset,CP6,6.086685674415612e-11
+genMusic03,5s Before Onset,TP9,2.534024570936449e-10
+genMusic03,5s Before Onset,TP10,2.0853212166950394e-10
+genMusic03,5s Before Onset,POz,2.636457632027221e-11
+genMusic03,At Onset,Fp1,7.501536286934714e-11
+genMusic03,At Onset,Fp2,4.820888142406989e-11
+genMusic03,At Onset,F3,4.153070212215772e-11
+genMusic03,At Onset,F4,5.7225161362463136e-11
+genMusic03,At Onset,C3,2.9249145310009994e-11
+genMusic03,At Onset,C4,2.5990684805797628e-11
+genMusic03,At Onset,P3,5.448933095767059e-11
+genMusic03,At Onset,P4,2.7587446101119e-11
+genMusic03,At Onset,O1,3.654303516478123e-11
+genMusic03,At Onset,O2,4.479443933974637e-11
+genMusic03,At Onset,F7,1.519098301341668e-10
+genMusic03,At Onset,F8,8.813645564402904e-11
+genMusic03,At Onset,T7,8.03448820912328e-11
+genMusic03,At Onset,T8,9.298797297782592e-11
+genMusic03,At Onset,P7,5.969093216176633e-11
+genMusic03,At Onset,P8,8.929472832602464e-11
+genMusic03,At Onset,Fz,8.23983034409797e-12
+genMusic03,At Onset,Cz,8.079347108105763e-12
+genMusic03,At Onset,Pz,9.623851803541127e-12
+genMusic03,At Onset,Oz,4.1918934415087045e-11
+genMusic03,At Onset,FC1,1.4806903813091815e-11
+genMusic03,At Onset,FC2,5.508332434995655e-12
+genMusic03,At Onset,CP1,3.031055043081775e-11
+genMusic03,At Onset,CP2,2.1972409622865574e-11
+genMusic03,At Onset,FC5,7.467519374835838e-11
+genMusic03,At Onset,FC6,5.97054675736815e-11
+genMusic03,At Onset,CP5,3.561757168312921e-11
+genMusic03,At Onset,CP6,4.9391484898988013e-11
+genMusic03,At Onset,TP9,2.025461005180557e-10
+genMusic03,At Onset,TP10,1.4571853102170419e-10
+genMusic03,At Onset,POz,2.5701343345499725e-11
+genMusic03,5s After Onset,Fp1,1.3425384836988001e-10
+genMusic03,5s After Onset,Fp2,7.530753868995299e-11
+genMusic03,5s After Onset,F3,8.137884909513033e-11
+genMusic03,5s After Onset,F4,7.263208628752544e-11
+genMusic03,5s After Onset,C3,7.292747600334255e-11
+genMusic03,5s After Onset,C4,5.969607401633306e-11
+genMusic03,5s After Onset,P3,4.731877673446514e-11
+genMusic03,5s After Onset,P4,4.6479542651275315e-11
+genMusic03,5s After Onset,O1,4.1395180600609494e-11
+genMusic03,5s After Onset,O2,7.339501633598953e-11
+genMusic03,5s After Onset,F7,2.974464060117692e-10
+genMusic03,5s After Onset,F8,1.9871197348128935e-10
+genMusic03,5s After Onset,T7,1.8273117124165566e-10
+genMusic03,5s After Onset,T8,2.2203655831488794e-10
+genMusic03,5s After Onset,P7,1.269748755060084e-10
+genMusic03,5s After Onset,P8,1.9851090937979488e-10
+genMusic03,5s After Onset,Fz,1.50847690743396e-11
+genMusic03,5s After Onset,Cz,6.11922523691865e-12
+genMusic03,5s After Onset,Pz,7.628547993200384e-12
+genMusic03,5s After Onset,Oz,6.276888200423718e-11
+genMusic03,5s After Onset,FC1,2.7588557611258303e-11
+genMusic03,5s After Onset,FC2,1.505831636248124e-11
+genMusic03,5s After Onset,CP1,2.703567527613908e-11
+genMusic03,5s After Onset,CP2,2.1088843831052308e-11
+genMusic03,5s After Onset,FC5,1.7566419738090882e-10
+genMusic03,5s After Onset,FC6,1.3553775268932572e-10
+genMusic03,5s After Onset,CP5,8.28514074194514e-11
+genMusic03,5s After Onset,CP6,9.896957846648216e-11
+genMusic03,5s After Onset,TP9,2.757612662444827e-10
+genMusic03,5s After Onset,TP10,3.4000534134720675e-10
+genMusic03,5s After Onset,POz,2.5821561460429225e-11
