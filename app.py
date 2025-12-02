@@ -314,60 +314,6 @@ with tab1:
         st.pyplot(fig)
 
 
-
-
-# =====================================================
-# TAB 3 – Gender Analysis
-# =====================================================
-# with tab3:
-#     st.header("Gender-based Band Power & Beta/Alpha Ratio")
-#     band_df, ratio_df = load_tab3_data()
-
-#     if st.checkbox("Show band power plots", value=True):
-#         plt.style.use('dark_background')
-#         fig = plt.figure(figsize=(14, 10))
-#         ax1 = plt.subplot(2, 2, 1)
-#         sns.barplot(data=band_df, x="band", y="power", hue="gender", ax=ax1, errorbar="se")
-#         ax1.set_title("Mean Band Power by Gender")
-#         ax1.set_ylabel("Power (μV²/Hz)")
-
-#         ax2 = plt.subplot(2, 2, 2)
-#         sns.boxplot(data=band_df, x="band", y="power", hue="gender", ax=ax2)
-#         ax2.set_title("Band Power Distribution")
-#         ax2.set_ylabel("Power (μV²/Hz)")
-
-#         ax3 = plt.subplot(2, 1, 2)
-#         sns.barplot(data=band_df, x="task_label", y="power", hue="gender", ax=ax3, errorbar="se")
-#         ax3.set_title("Band Power by Task and Gender")
-#         ax3.set_ylabel("Power (μV²/Hz)")
-#         ax3.tick_params(axis="x", rotation=30)
-        
-#         fig.patch.set_facecolor('#000000')
-#         plt.tight_layout()
-#         st.pyplot(fig)
-
-#     st.markdown("---")
-
-#     if st.checkbox("Show Beta/Alpha ratio plots", value=True):
-#         plt.style.use('dark_background')
-#         fig = plt.figure(figsize=(12, 6))
-#         ax1 = plt.subplot(1, 2, 1)
-#         sns.barplot(data=ratio_df, x="gender", y="beta_alpha_ratio", ax=ax1, errorbar="se")
-#         ax1.axhline(1.0, color="gray", linestyle="--", linewidth=1)
-#         ax1.set_title("Beta/Alpha Ratio by Gender")
-#         ax1.set_ylabel("Beta/Alpha Ratio")
-
-#         ax2 = plt.subplot(1, 2, 2)
-#         sns.barplot(data=ratio_df, x="task_label", y="beta_alpha_ratio", hue="gender", ax=ax2, errorbar="se")
-#         ax2.axhline(1.0, color="gray", linestyle="--", linewidth=1)
-#         ax2.set_title("Beta/Alpha Ratio by Task and Gender")
-#         ax2.tick_params(axis="x", rotation=30)
-        
-#         fig.patch.set_facecolor('#000000')
-#         plt.tight_layout()
-#         st.pyplot(fig)
-
-
 with tab3:
     st.header("Gender-based Band Power & Beta/Alpha Ratio")
     band_df, ratio_df = load_tab3_data()
@@ -709,10 +655,6 @@ with tab5:
         st.markdown("### Summary statistics")
         st.dataframe(summary_df[summary_df["pair"] == pair])
 
-# =====================================================
-# TAB 6 – Arousal vs Valence (interactive)
-# =====================================================
-
 with tab6:
     st.header("Arousal vs Valence (Per Participant & Task)")
     df6 = load_tab6_data()  # Subject, Task, Trial, Valence, Arousal
@@ -742,37 +684,25 @@ with tab6:
         }
         df_plot["Task Label"] = df_plot["Task"].map(task_name_map).fillna(df_plot["Task"])
 
-        import plotly.express as px
-
-        # filters
-        cols_ui = st.columns(2)
-        with cols_ui[0]:
-            tasks_selected = st.multiselect(
-                "Music types",
-                sorted(df_plot["Task Label"].unique()),
-                default=sorted(df_plot["Task Label"].unique()),
-            )
-        with cols_ui[1]:
-            participants_selected = st.multiselect(
-                "Participants",
-                sorted(df_plot["ParticipantID"].unique()),
-                default=sorted(df_plot["ParticipantID"].unique()),
-            )
-
-        sub = df_plot[
-            df_plot["Task Label"].isin(tasks_selected)
-            & df_plot["ParticipantID"].isin(participants_selected)
-        ]
+        # optional participant filter
+        participants = sorted(df_plot["ParticipantID"].unique())
+        participants_selected = st.multiselect(
+            "Participants",
+            participants,
+            default=participants,
+        )
+        sub = df_plot[df_plot["ParticipantID"].isin(participants_selected)]
 
         if sub.empty:
-            st.error("No data for the selected filters.")
+            st.error("No data for the selected participants.")
         else:
             fig = px.scatter(
                 sub,
                 x="Valence",
                 y="Arousal",
                 color="ParticipantID",
-                symbol="Task Label",
+                facet_col="Task Label",   # 4 music types
+                facet_col_wrap=2,         # 2 graphs per row
                 hover_data={
                     "ParticipantID": True,
                     "Task Label": True,
@@ -783,6 +713,7 @@ with tab6:
                     "Valence": "Valence (Pleasantness)",
                     "Arousal": "Arousal (Intensity / Emotional Strength)",
                     "ParticipantID": "Participant",
+                    "Task Label": "Music Type",
                 },
                 title="Arousal vs Valence by Participant and Music Type",
             )
@@ -793,7 +724,7 @@ with tab6:
             fig.update_layout(
                 plot_bgcolor="#111111",
                 paper_bgcolor="#000000",
-                font=dict(color="white"),  # axis labels, ticks
+                font=dict(color="white"),
                 title=dict(
                     text="Arousal vs Valence by Participant and Music Type",
                     font=dict(color="white", size=18),
@@ -808,9 +739,22 @@ with tab6:
                     font=dict(color="white"),
                     title_font=dict(color="white"),
                 ),
+                margin=dict(t=80, l=60, r=80, b=60),
             )
-            
-            # NEW EXPLANATION TEXT
+
+            # set spacing between the 2x2 facet panels
+            fig.update_layout(
+                grid=dict(
+                    rows=2,
+                    columns=2,
+                    pattern="independent",
+                    roworder="top to bottom",
+                    xgap=0.10,   # horizontal spacing between columns
+                    ygap=0.15,   # vertical spacing between rows
+                )
+            )
+
+
             st.markdown(
                 """
                 The scatter plots visualize the average emotional impact of different types of music as observed in 21 participants.  
