@@ -839,56 +839,8 @@ tab1, tab3, tab4, tab5, tab6 = st.tabs(
     ["Individual Subject", "Gender Analysis", "Theta Time Course", "Frontal Asymmetry", "Arousal vs Valence"]
 )
 
-# # =====================================================
-# # TAB 1 – Individual Subject Topomaps
-# # =====================================================
-# with tab1:
-#     st.header("Individual Subject Topomaps")
-#     df1 = load_tab1_data()
-#     subjects = sorted(df1["subject"].unique())
-#     task_keys = list(TASK_OPTIONS.keys())
-#     bands = list(FREQUENCY_BANDS_SUBJECT.keys())
 
-#     col1, col2 = st.columns(2)
-#     with col1:
-#         subj = st.selectbox("Subject", subjects)
-#     with col2:
-#         music_key = st.selectbox("Music Type", task_keys)
-#     band_sel = st.multiselect("Frequency bands", bands, default=bands)
 
-#     if st.button("Show Topomaps (Precomputed)", type="primary"):
-#         sub_df = df1[(df1["subject"] == subj) & (df1["task_key"] == music_key)]
-#         if sub_df.empty:
-#             st.error("No data for this subject / music combination.")
-#         else:
-#             ch_names = sorted(sub_df["channel"].unique())
-#             info = make_info_from_channels(ch_names)
-#             n_bands = len(band_sel)
-#             fig, axes = plt.subplots(1, n_bands, figsize=(5 * n_bands, 5))
-#             if n_bands == 1:
-#                 axes = [axes]
-
-#             for ax, band in zip(axes, band_sel):
-#                 band_df = sub_df[sub_df["band"] == band]
-#                 band_df = band_df.set_index("channel").reindex(ch_names)
-#                 vals = band_df["power"].to_numpy()
-#                 mne.viz.plot_topomap(
-#                     vals, info, axes=ax, show=False,
-#                     cmap=FREQUENCY_BANDS_SUBJECT[band]["cmap"],
-#                     contours=6, extrapolate="head", sphere=(0.0, 0.0, 0.09, 0.2),
-#                 )
-#                 ax.set_title(f"{band}\n{FREQUENCY_BANDS_SUBJECT[band]['label']}", fontsize=13, color='white')
-            
-#             # Dark theme
-#             fig.patch.set_facecolor('#000000')
-#             for ax in axes:
-#                 ax.set_facecolor('#111111')
-#                 ax.xaxis.label.set_color('white')
-#                 ax.yaxis.label.set_color('white')
-#                 ax.tick_params(colors='white')
-#                 ax.title.set_color('white')
-            
-#             st.pyplot(fig)
 
 # =====================================================
 # TAB 1 – Individual Subject Topomaps
