@@ -814,6 +814,15 @@ with tab6:
                     title_font=dict(color="white"),
                 ),
             )
+            
+            # NEW EXPLANATION TEXT
+            st.markdown(
+                """
+                The scatter plots visualize the average emotional impact of different types of music as observed in 21 participants.  
+                From the visualization, classical music shows the most diverse range of emotional responses, while generative music
+                responses are more tightly clustered, indicating comparatively lower emotional variability.
+                """
+            )
 
             st.plotly_chart(fig, use_container_width=True)
 
