@@ -612,13 +612,7 @@ with tab5:
 
         # ---------- Interactive heatmap ----------
         heat_df = pd.DataFrame(mat, index=participants, columns=times)
-        heat_long = (
-            heat_df.reset_index()
-            .melt(id_vars="index", var_name="time", value_name="asymmetry")
-            .rename(columns={"index": "Participant"})
-        )
 
-        # scale symmetric by 95th percentile like before
         vmax = np.percentile(np.abs(mat), 95)
         vmin = -vmax
 
@@ -642,9 +636,11 @@ with tab5:
             paper_bgcolor="#000000",
             font=dict(color="white"),
             coloraxis_colorbar=dict(
-                title="Asymmetry",
+                title=dict(
+                    text="Asymmetry",
+                    font=dict(color="white"),
+                ),
                 tickcolor="white",
-                titlefont=dict(color="white"),
                 tickfont=dict(color="white"),
             ),
             title=dict(
@@ -672,7 +668,6 @@ with tab5:
             },
             title=f"{pair} Mean Asymmetry Over Time (Interactive)",
         )
-        # add markers and CI band
         fig_line.update_traces(
             mode="lines+markers",
             line=dict(color="cyan"),
