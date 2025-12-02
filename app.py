@@ -906,7 +906,7 @@ with tab1:
     with col2:
         music_key = st.selectbox("Music Type", task_keys)
 
-    if st.button("Show Topomaps (Precomputed)", type="primary"):
+    if st.button("Show Topomaps", type="primary"):
         sub_df = df1[(df1["subject"] == subj) & (df1["task_key"] == music_key)]
         if sub_df.empty:
             st.error("No data for this subject / music combination.")
