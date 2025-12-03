@@ -808,6 +808,14 @@ with tab6:
                 The scatter plots visualize the average emotional impact of different types of music as observed in 21 participants.  
                 From the visualization, classical music shows the most diverse range of emotional responses, while generative music
                 responses are more tightly clustered, indicating comparatively lower emotional variability.
+                
+                
+                ⁠Valence (X-axis): Measures the Emotional Direction (Pleasantness).
+                Right = Positive/Joyful; Left = Negative/Sadness.
+                
+                
+                ⁠Arousal (Y-axis): Measures the Emotional Intensity (Strength/Energy).
+                Up = High Intensity/Tension; Down = Low Intensity/Calmness.
                 """
             )
 
