@@ -178,6 +178,31 @@ def make_info_from_channels(ch_names, sfreq=250.0):
 # ========================
 # HEADER & TABS
 # ========================
+BRAIN_VIZ_URL = "https://mindtunes6.netlify.app/"
+
+# Top-left button row: clickable link button
+btn_col, _ = st.columns([1, 5])
+with btn_col:
+    st.markdown(
+        f"""
+        <a href="{BRAIN_VIZ_URL}" target="_blank">
+            <button style="
+                background: linear-gradient(90deg, #2D2F3D, #393C4E);
+                color: #FFFFFF;
+                border-radius: 999px;
+                border: 1px solid #5C5F7A;
+                padding: 0.4rem 1.4rem;
+                font-weight: 500;
+                cursor: pointer;
+            ">
+                Brain Visualisation
+            </button>
+        </a>
+        """,
+        unsafe_allow_html=True,
+    )
+        
+        
 title_col1, title_col2 = st.columns([3, 1])
 with title_col1:
     st.markdown(
