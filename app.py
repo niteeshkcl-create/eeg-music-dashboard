@@ -205,6 +205,7 @@ tab1, tab3, tab4, tab5, tab6 = st.tabs(
 # =====================================================
 # TAB 1 – Individual Participant Topomaps
 # =====================================================
+
 with tab1:
     colored_header(
         label="Individual Participant Topomaps",
@@ -272,34 +273,119 @@ with tab1:
         ]
         legend_ax = fig.add_subplot(gs[0, 6])
 
-        for band, ax, cax in zip(band_order, topo_axes, cbar_axes):
+        # --- Topomaps with white head outline + orientation labels ---
+        for idx, (band, ax, cax) in enumerate(zip(band_order, topo_axes, cbar_axes)):
             band_df = sub_df[sub_df["band"] == band]
             band_df = band_df.set_index("channel").reindex(ch_names)
             vals = band_df["power"].to_numpy()
 
+            cmap = FREQUENCY_BANDS_SUBJECT[band]["cmap"]
+
+            # Plot topomap: head-only, colors inside head
             im, _ = mne.viz.plot_topomap(
                 vals,
                 info,
                 axes=ax,
                 show=False,
-                cmap=FREQUENCY_BANDS_SUBJECT[band]["cmap"],
+                cmap=cmap,
                 contours=6,
-                extrapolate="head",
-                sphere=(0.0, 0.0, 0.09, 0.2),
+                extrapolate="head",            # keep data inside head
+                sphere=(0.0, 0.0, 0.09, 0.2),  # same sphere used elsewhere
+                sensors=True,
             )
 
+            # make head / nose / ears lines white
+            for line in ax.lines:
+                line.set_color("white")
+                line.set_linewidth(1.5)
+
+            # dark background, no ticks
+            ax.set_facecolor("#000000")
+            ax.tick_params(
+                left=False, bottom=False,
+                labelleft=False, labelbottom=False,
+            )
+
+            # Orientation labels only on the rightmost map
+            if idx == len(band_order) - 1:
+                xlim = ax.get_xlim()
+                ylim = ax.get_ylim()
+
+                ax.text(
+                    0,
+                    ylim[1] * 0.85,
+                    "Front\n(Frontal)",
+                    ha="center",
+                    va="center",
+                    fontsize=9,
+                    fontweight="bold",
+                    bbox=dict(
+                        boxstyle="round,pad=0.3",
+                        facecolor="white",
+                        edgecolor="black",
+                        alpha=0.7,
+                    ),
+                )
+                ax.text(
+                    0,
+                    ylim[0] * 0.85,
+                    "Back\n(Occipital)",
+                    ha="center",
+                    va="center",
+                    fontsize=9,
+                    fontweight="bold",
+                    bbox=dict(
+                        boxstyle="round,pad=0.3",
+                        facecolor="white",
+                        edgecolor="black",
+                        alpha=0.7,
+                    ),
+                )
+                ax.text(
+                    xlim[0] * 0.85,
+                    0,
+                    "Left\n(Temporal)",
+                    ha="center",
+                    va="center",
+                    fontsize=9,
+                    fontweight="bold",
+                    bbox=dict(
+                        boxstyle="round,pad=0.3",
+                        facecolor="white",
+                        edgecolor="black",
+                        alpha=0.7,
+                    ),
+                )
+                ax.text(
+                    xlim[1] * 0.85,
+                    0,
+                    "Right\n(Temporal)",
+                    ha="center",
+                    va="center",
+                    fontsize=9,
+                    fontweight="bold",
+                    bbox=dict(
+                        boxstyle="round,pad=0.3",
+                        facecolor="white",
+                        edgecolor="black",
+                        alpha=0.7,
+                    ),
+                )
+
+            # Titles
             if band == "Delta":
-                t = "Delta Band (1–4 Hz)\nSleep / Deep Relaxation"
+                t = "Delta Band (1-4 Hz)\nSleep/Deep Relaxation"
             elif band == "Alpha":
-                t = "Alpha Band (8–13 Hz)\nCalm / Relaxation"
+                t = "Alpha Band (8-13 Hz)\nCalm/Relaxation"
             else:
-                t = "Beta Band (13–30 Hz)\nAnxiety / Alertness"
-            ax.set_title(t, fontsize=12, fontweight="bold", color="white")
+                t = "Beta Band (13-30 Hz)\nAnxiety/Alertness"
+            ax.set_title(t, fontsize=13, fontweight="bold", color="white", pad=15)
 
             cbar = fig.colorbar(im, cax=cax)
             cbar.ax.tick_params(colors="white", labelsize=8)
             cbar.set_label("Power (µV²/Hz)", color="white", fontsize=9)
 
+        # --- Brain regions legend panel ---
         legend_ax.axis("off")
         legend_ax.set_facecolor("#000000")
         legend_ax.text(
@@ -345,151 +431,150 @@ with tab1:
             y -= dy
 
         fig.patch.set_facecolor("#000000")
-        for ax in topo_axes:
-            ax.set_facecolor("#000000")
-            ax.tick_params(colors="white")
-
         plt.tight_layout()
         st.pyplot(fig)
 
-# =====================================================
-# TAB 3 – Gender Analysis (interactive)
-# =====================================================
-with tab3:
-    colored_header(
-        label="Gender-based Band Power & Ratios",
-        description="Compare spectral power and beta/alpha balance across genders and music types.",
-        color_name="violet-70",
-    )
 
-    band_df, ratio_df = load_tab3_data()
 
-    sub_tab1, sub_tab2 = st.tabs(["Band Power", "Beta/Alpha Ratio"])
+# # =====================================================
+# # TAB 3 – Gender Analysis (interactive)
+# # =====================================================
+# with tab3:
+#     colored_header(
+#         label="Gender-based Band Power & Ratios",
+#         description="Compare spectral power and beta/alpha balance across genders and music types.",
+#         color_name="violet-70",
+#     )
 
-    with sub_tab1:
-        fig1 = px.bar(
-            band_df,
-            x="band",
-            y="power",
-            color="gender",
-            barmode="group",
-            hover_data={"power": ":3e", "band": True, "gender": True, "task_label": True},
-            labels={
-                "band": "Band",
-                "power": "Power (μV²/Hz)",
-                "gender": "Gender",
-            },
-            title="Mean Band Power by Gender",
-        )
-        fig1.update_layout(
-            plot_bgcolor="#111111",
-            paper_bgcolor="#000000",
-            font=dict(color="white"),
-            title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
-            legend=dict(
-                bgcolor="#111111",
-                bordercolor="#444444",
-                borderwidth=1,
-                font=dict(color="white"),
-                title_font=dict(color="white"),
-            ),
-        )
+#     band_df, ratio_df = load_tab3_data()
 
-        fig2 = px.bar(
-            band_df,
-            x="task_label",
-            y="power",
-            color="gender",
-            barmode="group",
-            hover_data={"power": ":3e", "band": True},
-            labels={
-                "task_label": "Music Type",
-                "power": "Power (μV²/Hz)",
-                "gender": "Gender",
-            },
-            title="Band Power by Task and Gender",
-        )
-        fig2.update_layout(
-            plot_bgcolor="#111111",
-            paper_bgcolor="#000000",
-            font=dict(color="white"),
-            xaxis_tickangle=-30,
-            title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
-            legend=dict(
-                bgcolor="#111111",
-                bordercolor="#444444",
-                borderwidth=1,
-                font=dict(color="white"),
-                title_font=dict(color="white"),
-            ),
-        )
+#     sub_tab1, sub_tab2 = st.tabs(["Band Power", "Beta/Alpha Ratio"])
 
-        col_a, col_b = st.columns(2)
-        with col_a:
-            st.plotly_chart(fig1, use_container_width=True)
-        with col_b:
-            st.plotly_chart(fig2, use_container_width=True)
+#     with sub_tab1:
+#         fig1 = px.bar(
+#             band_df,
+#             x="band",
+#             y="power",
+#             color="gender",
+#             barmode="group",
+#             hover_data={"power": ":3e", "band": True, "gender": True, "task_label": True},
+#             labels={
+#                 "band": "Band",
+#                 "power": "Power (μV²/Hz)",
+#                 "gender": "Gender",
+#             },
+#             title="Mean Band Power by Gender",
+#         )
+#         fig1.update_layout(
+#             plot_bgcolor="#111111",
+#             paper_bgcolor="#000000",
+#             font=dict(color="white"),
+#             title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+#             legend=dict(
+#                 bgcolor="#111111",
+#                 bordercolor="#444444",
+#                 borderwidth=1,
+#                 font=dict(color="white"),
+#                 title_font=dict(color="white"),
+#             ),
+#         )
 
-    with sub_tab2:
-        fig3 = px.bar(
-            ratio_df,
-            x="gender",
-            y="beta_alpha_ratio",
-            hover_data={"beta_alpha_ratio": ":.3f"},
-            labels={
-                "gender": "Gender",
-                "beta_alpha_ratio": "Beta/Alpha Ratio",
-            },
-            title="Beta/Alpha Ratio by Gender",
-        )
-        fig3.add_hline(y=1.0, line_dash="dash", line_color="gray")
-        fig3.update_layout(
-            plot_bgcolor="#111111",
-            paper_bgcolor="#000000",
-            font=dict(color="white"),
-            title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
-            showlegend=False,
-        )
+#         fig2 = px.bar(
+#             band_df,
+#             x="task_label",
+#             y="power",
+#             color="gender",
+#             barmode="group",
+#             hover_data={"power": ":3e", "band": True},
+#             labels={
+#                 "task_label": "Music Type",
+#                 "power": "Power (μV²/Hz)",
+#                 "gender": "Gender",
+#             },
+#             title="Band Power by Task and Gender",
+#         )
+#         fig2.update_layout(
+#             plot_bgcolor="#111111",
+#             paper_bgcolor="#000000",
+#             font=dict(color="white"),
+#             xaxis_tickangle=-30,
+#             title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+#             legend=dict(
+#                 bgcolor="#111111",
+#                 bordercolor="#444444",
+#                 borderwidth=1,
+#                 font=dict(color="white"),
+#                 title_font=dict(color="white"),
+#             ),
+#         )
 
-        fig4 = px.bar(
-            ratio_df,
-            x="task_label",
-            y="beta_alpha_ratio",
-            color="gender",
-            barmode="group",
-            hover_data={"beta_alpha_ratio": ":.3f"},
-            labels={
-                "task_label": "Music Type",
-                "beta_alpha_ratio": "Beta/Alpha Ratio",
-                "gender": "Gender",
-            },
-            title="Beta/Alpha Ratio by Task and Gender",
-        )
-        fig4.add_hline(y=1.0, line_dash="dash", line_color="gray")
-        fig4.update_layout(
-            plot_bgcolor="#111111",
-            paper_bgcolor="#000000",
-            font=dict(color="white"),
-            xaxis_tickangle=-30,
-            title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
-            legend=dict(
-                bgcolor="#111111",
-                bordercolor="#444444",
-                borderwidth=1,
-                font=dict(color="white"),
-                title_font=dict(color="white"),
-            ),
-        )
+#         col_a, col_b = st.columns(2)
+#         with col_a:
+#             st.plotly_chart(fig1, use_container_width=True)
+#         with col_b:
+#             st.plotly_chart(fig2, use_container_width=True)
 
-        col_c, col_d = st.columns(2)
-        with col_c:
-            st.plotly_chart(fig3, use_container_width=True)
-        with col_d:
-            st.plotly_chart(fig4, use_container_width=True)
+#     with sub_tab2:
+#         fig3 = px.bar(
+#             ratio_df,
+#             x="gender",
+#             y="beta_alpha_ratio",
+#             hover_data={"beta_alpha_ratio": ":.3f"},
+#             labels={
+#                 "gender": "Gender",
+#                 "beta_alpha_ratio": "Beta/Alpha Ratio",
+#             },
+#             title="Beta/Alpha Ratio by Gender",
+#         )
+#         fig3.add_hline(y=1.0, line_dash="dash", line_color="gray")
+#         fig3.update_layout(
+#             plot_bgcolor="#111111",
+#             paper_bgcolor="#000000",
+#             font=dict(color="white"),
+#             title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+#             showlegend=False,
+#         )
+
+#         fig4 = px.bar(
+#             ratio_df,
+#             x="task_label",
+#             y="beta_alpha_ratio",
+#             color="gender",
+#             barmode="group",
+#             hover_data={"beta_alpha_ratio": ":.3f"},
+#             labels={
+#                 "task_label": "Music Type",
+#                 "beta_alpha_ratio": "Beta/Alpha Ratio",
+#                 "gender": "Gender",
+#             },
+#             title="Beta/Alpha Ratio by Task and Gender",
+#         )
+#         fig4.add_hline(y=1.0, line_dash="dash", line_color="gray")
+#         fig4.update_layout(
+#             plot_bgcolor="#111111",
+#             paper_bgcolor="#000000",
+#             font=dict(color="white"),
+#             xaxis_tickangle=-30,
+#             title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+#             legend=dict(
+#                 bgcolor="#111111",
+#                 bordercolor="#444444",
+#                 borderwidth=1,
+#                 font=dict(color="white"),
+#                 title_font=dict(color="white"),
+#             ),
+#         )
+
+#         col_c, col_d = st.columns(2)
+#         with col_c:
+#             st.plotly_chart(fig3, use_container_width=True)
+#         with col_d:
+#             st.plotly_chart(fig4, use_container_width=True)
 
 # =====================================================
 # TAB 4 – Theta Time Course
 # =====================================================
+
 with tab4:
     colored_header(
         label="Theta Band Time-Course Topomaps",
@@ -537,6 +622,7 @@ with tab4:
                 flat = np.concatenate(all_vals)
                 vmin, vmax = np.nanpercentile(flat, [5, 95])
                 last_im = None
+
                 for ti, t in enumerate(tasks_choice):
                     for wi, w in enumerate(THETA_WINDOWS_ORDER):
                         ax = axes[ti, wi]
@@ -544,6 +630,8 @@ with tab4:
                             ax.axis("off")
                             continue
                         vals = theta_maps[t][w]
+
+                        # Topomap: head-only, white outline, colors inside head
                         im, _ = mne.viz.plot_topomap(
                             vals,
                             info,
@@ -552,10 +640,24 @@ with tab4:
                             vlim=(vmin, vmax),
                             cmap="viridis",
                             contours=6,
-                            extrapolate="head",
-                            sphere="auto",
+                            extrapolate="head",            # keep data inside head
+                            sphere=(0.0, 0.0, 0.09, 0.2),  # same sphere as Tab 1
+                            sensors=True,
                         )
                         last_im = im
+
+                        # make head / nose / ears lines white
+                        for line in ax.lines:
+                            line.set_color("white")
+                            line.set_linewidth(1.5)
+
+                        # dark background, no ticks
+                        ax.set_facecolor("#000000")
+                        ax.tick_params(
+                            left=False, bottom=False,
+                            labelleft=False, labelbottom=False,
+                        )
+
                         if ti == 0:
                             ax.set_title(w, fontsize=11, fontweight="bold", color="white")
                         if wi == 0:
@@ -570,6 +672,235 @@ with tab4:
 
                 fig.patch.set_facecolor("#000000")
                 st.pyplot(fig)
+
+
+# =====================================================
+# TAB 3 – Gender Analysis (interactive)
+# =====================================================
+with tab3:
+    colored_header(
+        label="Gender-based Band Power & Ratios",
+        description="Compare spectral power and beta/alpha balance across genders and music types.",
+        color_name="violet-70",
+    )
+
+    band_df, ratio_df = load_tab3_data()
+
+
+    sub_tab1, sub_tab2 = st.tabs(["Band Power", "Beta/Alpha Ratio"])
+
+    # ---------- Band Power tab ----------
+    with sub_tab1:
+        # 1) Mean band power by gender (bar)
+        fig1 = px.bar(
+            band_df,
+            x="band",
+            y="power",
+            color="gender",
+            barmode="group",
+            hover_data={"power": ":3e", "band": True, "gender": True, "task_label": True},
+            labels={
+                "band": "Band",
+                "power": "Power (μV²/Hz)",
+                "gender": "Gender",
+            },
+            title="Mean Band Power by Gender",
+        )
+
+        # 2) Band power by task and gender (bar)
+        fig2 = px.bar(
+            band_df,
+            x="task_label",
+            y="power",
+            color="gender",
+            barmode="group",
+            hover_data={"power": ":3e", "band": True},
+            labels={
+                "task_label": "Music Type",
+                "power": "Power (μV²/Hz)",
+                "gender": "Gender",
+            },
+            title="Band Power by Task and Gender",
+        )
+
+        # 3) Theta band power by task (bar)
+        theta_df = band_df[band_df["band"] == "Theta"]
+        fig_theta_task = px.bar(
+            theta_df,
+            x="task_label",
+            y="power",
+            color="gender",
+            barmode="group",
+            hover_data={"power": ":3e"},
+            labels={
+                "task_label": "Music Type",
+                "power": "Theta Power (μV²/Hz)",
+                "gender": "Gender",
+            },
+            title="Theta Band Power by Task",
+        )
+
+        # 4) Distribution: box plot (power by band × gender)
+        fig_box = px.box(
+            band_df,
+            x="band",
+            y="power",
+            color="gender",
+            points="all",
+            hover_data={"task_label": True},
+            labels={
+                "band": "Band",
+                "power": "Power (μV²/Hz)",
+                "gender": "Gender",
+            },
+            title="Band Power Distribution by Gender (Box Plot)",
+        )
+
+        # 5) Distribution: violin plot
+        fig_violin = px.violin(
+            band_df,
+            x="band",
+            y="power",
+            color="gender",
+            box=True,
+            points="all",
+            hover_data={"task_label": True},
+            labels={
+                "band": "Band",
+                "power": "Power (μV²/Hz)",
+                "gender": "Gender",
+            },
+            title="Band Power Distribution by Gender (Violin Plot)",
+        )
+
+        for f in [fig1, fig2, fig_theta_task, fig_box, fig_violin]:
+            f.update_layout(
+                plot_bgcolor="#111111",
+                paper_bgcolor="#000000",
+                font=dict(color="white"),
+                title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+                legend=dict(
+                    bgcolor="#111111",
+                    bordercolor="#444444",
+                    borderwidth=1,
+                    font=dict(color="white"),
+                    title_font=dict(color="white"),
+                ),
+            )
+
+        fig2.update_layout(xaxis_tickangle=-30)
+        fig_theta_task.update_layout(xaxis_tickangle=-30)
+        fig_box.update_layout(xaxis_tickangle=0)
+        fig_violin.update_layout(xaxis_tickangle=0)
+
+        col_a, col_b = st.columns(2)
+        with col_a:
+            st.plotly_chart(fig1, use_container_width=True)
+            st.plotly_chart(fig_box, use_container_width=True)
+            st.plotly_chart(fig_theta_task, use_container_width=True)
+        with col_b:
+            st.plotly_chart(fig2, use_container_width=True)
+            st.plotly_chart(fig_violin, use_container_width=True)
+
+    # ---------- Beta/Alpha Ratio tab ----------
+    with sub_tab2:
+        # 1) Beta/Alpha ratio by gender (bar)
+        fig3 = px.bar(
+            ratio_df,
+            x="gender",
+            y="beta_alpha_ratio",
+            hover_data={"beta_alpha_ratio": ":.3f"},
+            labels={
+                "gender": "Gender",
+                "beta_alpha_ratio": "Beta/Alpha Ratio",
+            },
+            title="Beta/Alpha Ratio by Gender",
+        )
+        fig3.add_hline(y=1.0, line_dash="dash", line_color="gray")
+
+        # 2) Beta/Alpha ratio by task and gender (bar)
+        fig4 = px.bar(
+            ratio_df,
+            x="task_label",
+            y="beta_alpha_ratio",
+            color="gender",
+            barmode="group",
+            hover_data={"beta_alpha_ratio": ":.3f"},
+            labels={
+                "task_label": "Music Type",
+                "beta_alpha_ratio": "Beta/Alpha Ratio",
+                "gender": "Gender",
+            },
+            title="Beta/Alpha Ratio by Task and Gender",
+        )
+        fig4.add_hline(y=1.0, line_dash="dash", line_color="gray")
+
+        # 3) Distribution: box plot for Beta/Alpha ratio
+        fig_ratio_box = px.box(
+            ratio_df,
+            x="gender",
+            y="beta_alpha_ratio",
+            points="all",
+            labels={
+                "gender": "Gender",
+                "beta_alpha_ratio": "Beta/Alpha Ratio",
+            },
+            title="Beta/Alpha Ratio Distribution by Gender (Box Plot)",
+        )
+        fig_ratio_box.add_hline(y=1.0, line_dash="dash", line_color="gray")
+
+        for f in [fig3, fig4, fig_ratio_box]:
+            f.update_layout(
+                plot_bgcolor="#111111",
+                paper_bgcolor="#000000",
+                font=dict(color="white"),
+                title=dict(font=dict(color="white", size=18), x=0.5, xanchor="center"),
+            )
+
+        fig4.update_layout(
+            xaxis_tickangle=-30,
+            legend=dict(
+                bgcolor="#111111",
+                bordercolor="#444444",
+                borderwidth=1,
+                font=dict(color="white"),
+                title_font=dict(color="white"),
+            ),
+        )
+
+        col_c, col_d = st.columns(2)
+        with col_c:
+            st.plotly_chart(fig3, use_container_width=True)
+            st.plotly_chart(fig_ratio_box, use_container_width=True)
+        with col_d:
+            st.plotly_chart(fig4, use_container_width=True)
+            
+        # ---------- descriptive stats ----------
+    # Band power stats: gender × band
+    band_stats = (
+        band_df.groupby(["gender", "band"])["power"]
+        .agg(N="count", Mean="mean", SD="std")
+        .reset_index()
+    )
+
+    # Beta/Alpha ratio stats: gender (overall)
+    ratio_stats = (
+        ratio_df.groupby("gender")["beta_alpha_ratio"]
+        .agg(N="count", Mean="mean", SD="std")
+        .reset_index()
+    )
+
+    st.markdown("#### Descriptive statistics")
+    col_stats1, col_stats2 = st.columns(2)
+    with col_stats1:
+        st.markdown("**Band power by gender and band**")
+        st.dataframe(band_stats, use_container_width=True)
+    with col_stats2:
+        st.markdown("**Beta/Alpha ratio by gender**")
+        st.dataframe(ratio_stats, use_container_width=True)
+
+
+
 
 # =====================================================
 # TAB 5 – Frontal Alpha Asymmetry
