@@ -206,10 +206,24 @@ tab1, tab3, tab4, tab5, tab6 = st.tabs(
 # TAB 1 – Individual Participant Topomaps
 # =====================================================
 
+description = """
+Visualize spatial EEG band power patterns for a selected participant and music condition. This figure shows how different types of brain activity changed while the participant listened to selected music. Each map represents a different brainwave band: Delta (blue), Alpha (green), and Beta (red). Darker colors indicate stronger activity in that frequency and highlight which regions of the brain were more relaxed or more alert during the music.
+
+Delta:
+These maps show the average pattern of Delta brainwaves, which reflect deep relaxation or drowsiness. Darker blue areas indicate stronger “deep relaxation” activity at different moments in the music, helping illustrate how the brain settles into a more restful state over time with different music genres.
+
+Alpha (8–13 Hz):
+These maps show the average pattern of Alpha brainwaves, associated with calm and relaxed states. Darker green areas indicate stronger “relaxed state” activity at key time points, revealing how different types of music support the brain in reaching and maintaining a calm, restful state.
+
+Beta (13–30 Hz):
+These maps show the average pattern of Beta brainwaves, linked to alertness and cognitive engagement. Darker red areas indicate stronger “alert/active” brain activity, highlighting how different music genres influence the brain’s level of focus, tension, or mental effort as the listening experience unfolds.
+"""
+
+
 with tab1:
     colored_header(
         label="Individual Participant Topomaps",
-        description="Visualize spatial EEG band power patterns for a selected participant and music condition.",
+        description=description,
         color_name="red-70",
     )
 
@@ -905,10 +919,15 @@ with tab3:
 # =====================================================
 # TAB 5 – Frontal Alpha Asymmetry
 # =====================================================
+asymmetry_text = """
+
+
+This figure shows how frontal alpha asymmetry, a brain measure linked to emotional approach and withdrawal, changes over time as people listen to different types of music. Each row represents one participant, and each column shows a moment in time during the 60-second listening period. Green shades indicate more “approach-related” activity, which is often associated with positive emotion or engagement. Red shades indicate more “withdrawal-related” activity, which can reflect negative emotion, avoidance, or reduced engagement. By comparing classical music with three generative music pieces, the heatmaps highlight how consistently (or inconsistently) each music type elicits positive or negative emotional tendencies across individuals.
+"""
 with tab5:
     colored_header(
         label="Frontal Alpha Asymmetry (Classical Music)",
-        description="Examine left–right frontal activation differences over time.",
+        description=asymmetry_text,
         color_name="green-70",
     )
 
@@ -1020,10 +1039,29 @@ with tab5:
 # =====================================================
 # TAB 6 – Arousal vs Valence (interactive)
 # =====================================================
+
+description_a = (
+            """
+            The scatter plots visualize the average emotional impact of different types of music as observed in 21 participants.
+From the visualization, classical music shows the most diverse range of emotional responses, while generative music
+responses are more tightly clustered, indicating comparatively lower emotional variability.
+
+
+⁠Valence (X-axis): Measures the Emotional Direction (Pleasantness).
+Right = Positive/Joyful; Left = Negative/Sadness.
+
+
+⁠Arousal (Y-axis): Measures the Emotional Intensity (Strength/Energy).
+Up = High Intensity/Tension; Down = Low Intensity/Calmness.
+            
+            
+            """
+)
+
 with tab6:
     colored_header(
         label="Arousal vs Valence",
-        description="Map average emotional responses to different music types for each participant.",
+        description=description_a,
         color_name="orange-70",
     )
 
@@ -1132,22 +1170,6 @@ with tab6:
 
             fig.for_each_annotation(
                 lambda a: a.update(font=dict(color="#E5E5EA", size=13))
-            )
-
-            st.markdown(
-                """
-                The scatter plots visualize the average emotional impact of different types of music as observed in 21 participants.  
-                From the visualization, classical music shows the most diverse range of emotional responses, while generative music
-                responses are more tightly clustered, indicating comparatively lower emotional variability.
-                
-                
-                ⁠Valence (X-axis): Measures the Emotional Direction (Pleasantness).
-                Right = Positive/Joyful; Left = Negative/Sadness.
-                
-                
-                ⁠Arousal (Y-axis): Measures the Emotional Intensity (Strength/Energy).
-                Up = High Intensity/Tension; Down = Low Intensity/Calmness.
-                """
             )
 
             st.plotly_chart(fig, use_container_width=True)
