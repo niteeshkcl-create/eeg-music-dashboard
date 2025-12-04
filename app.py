@@ -177,6 +177,11 @@ def make_info_from_channels(ch_names, sfreq=250.0):
     info.set_montage(montage, on_missing="ignore")
     return info
 
+@st.cache_data
+def load_band_evolution_data():
+    path = os.path.join(RESULTS_DIR, "band_evolution_topomaps.csv")
+    return pd.read_csv(path)
+
 # ========================
 # HEADER & TABS
 # ========================
@@ -225,13 +230,20 @@ style_metric_cards(
     border_left_color="#FF4B4B",
 )
 
-tab1, tab3, tab4, tab5, tab6 = st.tabs(
-    ["Individual Participant", "Gender Analysis", "Theta Time Course", "Frontal Asymmetry", "Arousal vs Valence"]
-)
-
-# tab1, tab3, tab5, tab6 = st.tabs(
-#     ["Individual Participant", "Gender Analysis", "Frontal Asymmetry", "Arousal vs Valence"]
+# tab1, tab3, tab4, tab5, tab6 = st.tabs(
+#     ["Individual Participant", "Gender Analysis", "Theta Time Course", "Frontal Asymmetry", "Arousal vs Valence"]
 # )
+
+tab1, tab3, tab4, tab7, tab5, tab6 = st.tabs(
+    [
+        "Individual Participant",
+        "Gender Analysis",
+        "Theta Time Course",
+        "Band Evolution",          # NEW
+        "Frontal Asymmetry",
+        "Arousal vs Valence",
+    ]
+)
 
 # =====================================================
 # TAB 1 – Individual Participant Topomaps
@@ -1366,3 +1378,134 @@ with tab6:
 
         # with st.expander("Show aggregated table (per participant & task)"):
         #     st.dataframe(df_plot, use_container_width=True, hide_index=True)
+        
+# =====================================================
+# TAB 7 – Delta / Alpha / Beta Evolution Topomaps
+# =====================================================
+with tab7:
+    colored_header(
+        label="Delta, Alpha, Beta Evolution",
+        description=(
+            "Percent change in band power from baseline, averaged across participants, "
+            "shown as scalp topomaps for each music type and time window."
+        ),
+        color_name="blue-70",
+    )
+
+    df_band = load_band_evolution_data()
+
+    if df_band.empty:
+        st.error("No precomputed band-evolution data found.")
+    else:
+        # Map BIDS task names to pretty labels
+        task_map = {
+            "classicalMusic": "Classical",
+            "genMusic01": "Generative 1",
+            "genMusic02": "Generative 2",
+            "genMusic03": "Generative 3",
+        }
+        df_band["task_label"] = df_band["task_bids"].map(task_map).fillna(df_band["task_bids"])
+
+        # Controls: band, tasks, windows
+        band_options = ["Delta", "Alpha", "Beta"]
+        band_sel = st.selectbox("Band", band_options, index=0)
+
+        win_order = ["Onset", "2s Post", "5s Post"]
+        win_sel = st.multiselect("Time windows", win_order, default=win_order)
+
+        task_labels = sorted(df_band["task_label"].unique())
+        task_sel = st.multiselect("Music types", task_labels, default=task_labels)
+
+        sub = df_band[
+            (df_band["band"] == band_sel)
+            & (df_band["window"].isin(win_sel))
+            & (df_band["task_label"].isin(task_sel))
+        ]
+
+        if sub.empty:
+            st.error("No data for the selected band / tasks / windows.")
+        else:
+            # Build MNE info for topomaps
+            ch_names = sorted(sub["channel"].unique())
+            info = make_info_from_channels(ch_names)
+
+            n_tasks = len(task_sel)
+            n_wins = len(win_sel)
+            fig, axes = plt.subplots(
+                n_tasks, n_wins, figsize=(4 * n_wins, 3.5 * n_tasks)
+            )
+            if n_tasks == 1:
+                axes = np.array([axes])
+
+            # Global color limits across all selected tiles
+            flat_vals = sub["pct_change"].to_numpy()
+            flat_vals = flat_vals[~np.isnan(flat_vals)]
+            if flat_vals.size > 0:
+                vmax = np.nanpercentile(np.abs(flat_vals), 95)
+                vmin = -vmax
+            else:
+                vmin, vmax = -20, 20
+
+            cmap_map = {"Delta": "Blues", "Alpha": "Greens", "Beta": "Reds"}
+            cmap = cmap_map.get(band_sel, "viridis")
+
+            last_im = None
+            for ti, task in enumerate(task_sel):
+                tdf = sub[sub["task_label"] == task]
+                for wi, win in enumerate(win_sel):
+                    ax = axes[ti, wi]
+                    wdf = tdf[tdf["window"] == win]
+                    if wdf.empty:
+                        ax.axis("off")
+                        continue
+
+                    wdf = wdf.set_index("channel").reindex(ch_names)
+                    vals = wdf["pct_change"].to_numpy()
+
+                    im, _ = mne.viz.plot_topomap(
+                        vals,
+                        info,
+                        axes=ax,
+                        show=False,
+                        vlim=(vmin, vmax),
+                        cmap=cmap,
+                        contours=4,
+                        extrapolate="head",
+                        sphere=(0.0, 0.0, 0.09, 0.2),
+                        sensors=True,
+                    )
+                    last_im = im
+
+                    # white head outline, dark background
+                    for line in ax.lines:
+                        line.set_color("white")
+                        line.set_linewidth(1.5)
+
+                    ax.set_facecolor("#000000")
+                    ax.tick_params(
+                        left=False,
+                        bottom=False,
+                        labelleft=False,
+                        labelbottom=False,
+                    )
+
+                    if ti == 0:
+                        ax.set_title(win, fontsize=11, fontweight="bold", color="white")
+                    if wi == 0:
+                        ax.set_ylabel(
+                            task, fontsize=11, fontweight="bold", color="white"
+                        )
+
+            if last_im is not None:
+                fig.subplots_adjust(right=0.90)
+                cax = fig.add_axes([0.92, 0.25, 0.02, 0.5])
+                cbar = fig.colorbar(last_im, cax=cax)
+                cbar.set_label(
+                    f"{band_sel} Power (% change from baseline)",
+                    fontsize=11,
+                    color="white",
+                )
+                cbar.ax.tick_params(colors="white")
+
+            fig.patch.set_facecolor("#000000")
+            st.pyplot(fig)

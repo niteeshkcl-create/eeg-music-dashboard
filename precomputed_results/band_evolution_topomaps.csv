@@ -1,0 +1,1117 @@
+task_bids,window,channel,band,pct_change
+classicalMusic,Onset,Fp1,Delta,0.004478945912870204
+classicalMusic,Onset,Fp2,Delta,23.676180461273344
+classicalMusic,Onset,F3,Delta,26.57312619952603
+classicalMusic,Onset,F4,Delta,6.3226140372780595
+classicalMusic,Onset,C3,Delta,91.97722779607373
+classicalMusic,Onset,C4,Delta,46.044046186929165
+classicalMusic,Onset,P3,Delta,69.49825380100056
+classicalMusic,Onset,P4,Delta,159.0487955530259
+classicalMusic,Onset,O1,Delta,20.77001343974863
+classicalMusic,Onset,O2,Delta,51.18949145766844
+classicalMusic,Onset,F7,Delta,60.31541287691726
+classicalMusic,Onset,F8,Delta,49.881795099022426
+classicalMusic,Onset,T7,Delta,87.43510909227574
+classicalMusic,Onset,T8,Delta,41.56083379204381
+classicalMusic,Onset,P7,Delta,37.93575142341386
+classicalMusic,Onset,P8,Delta,62.67345404227488
+classicalMusic,Onset,Fz,Delta,14.529491231483068
+classicalMusic,Onset,Cz,Delta,6.825931584516222
+classicalMusic,Onset,Pz,Delta,23.92391555704525
+classicalMusic,Onset,Oz,Delta,21.21691919009152
+classicalMusic,Onset,FC1,Delta,45.15111894855414
+classicalMusic,Onset,FC2,Delta,13.106090024374526
+classicalMusic,Onset,CP1,Delta,80.95666290396808
+classicalMusic,Onset,CP2,Delta,35.13565980172334
+classicalMusic,Onset,FC5,Delta,62.1603541429238
+classicalMusic,Onset,FC6,Delta,74.04693427626289
+classicalMusic,Onset,CP5,Delta,103.2437735285348
+classicalMusic,Onset,CP6,Delta,132.30697210756065
+classicalMusic,Onset,TP9,Delta,102.72208886111045
+classicalMusic,Onset,TP10,Delta,86.53104524000685
+classicalMusic,Onset,POz,Delta,24.243920699880924
+classicalMusic,2s Post,Fp1,Delta,62.52266350377994
+classicalMusic,2s Post,Fp2,Delta,81.98921416550432
+classicalMusic,2s Post,F3,Delta,28.367088962914075
+classicalMusic,2s Post,F4,Delta,-16.709642768593795
+classicalMusic,2s Post,C3,Delta,73.5123413483576
+classicalMusic,2s Post,C4,Delta,31.091251656875873
+classicalMusic,2s Post,P3,Delta,39.414422346736956
+classicalMusic,2s Post,P4,Delta,70.51728639698617
+classicalMusic,2s Post,O1,Delta,9.446811438836482
+classicalMusic,2s Post,O2,Delta,50.5140323206068
+classicalMusic,2s Post,F7,Delta,44.22330085504492
+classicalMusic,2s Post,F8,Delta,8.308953181854328
+classicalMusic,2s Post,T7,Delta,54.36416340435698
+classicalMusic,2s Post,T8,Delta,23.497644790772938
+classicalMusic,2s Post,P7,Delta,-9.947597817864278
+classicalMusic,2s Post,P8,Delta,36.02619183668433
+classicalMusic,2s Post,Fz,Delta,16.432850690065234
+classicalMusic,2s Post,Cz,Delta,30.626841560588815
+classicalMusic,2s Post,Pz,Delta,56.19455898713152
+classicalMusic,2s Post,Oz,Delta,24.341936189748328
+classicalMusic,2s Post,FC1,Delta,38.70746119488855
+classicalMusic,2s Post,FC2,Delta,43.21977839867346
+classicalMusic,2s Post,CP1,Delta,69.54718583693453
+classicalMusic,2s Post,CP2,Delta,36.66681530013716
+classicalMusic,2s Post,FC5,Delta,45.21638770181881
+classicalMusic,2s Post,FC6,Delta,24.8808438834788
+classicalMusic,2s Post,CP5,Delta,63.85483474486188
+classicalMusic,2s Post,CP6,Delta,60.3129661316764
+classicalMusic,2s Post,TP9,Delta,35.246096579087144
+classicalMusic,2s Post,TP10,Delta,42.07909226013903
+classicalMusic,2s Post,POz,Delta,21.00413485198589
+classicalMusic,5s Post,Fp1,Delta,69.92729700105683
+classicalMusic,5s Post,Fp2,Delta,76.83817155239169
+classicalMusic,5s Post,F3,Delta,277.940971242858
+classicalMusic,5s Post,F4,Delta,67.66125003631917
+classicalMusic,5s Post,C3,Delta,256.92798185217356
+classicalMusic,5s Post,C4,Delta,141.0992359567874
+classicalMusic,5s Post,P3,Delta,98.35502949845612
+classicalMusic,5s Post,P4,Delta,100.83261290090232
+classicalMusic,5s Post,O1,Delta,80.6869144728445
+classicalMusic,5s Post,O2,Delta,90.55120064878017
+classicalMusic,5s Post,F7,Delta,326.30875163724465
+classicalMusic,5s Post,F8,Delta,137.85477790137355
+classicalMusic,5s Post,T7,Delta,390.1770846001446
+classicalMusic,5s Post,T8,Delta,148.98464019466334
+classicalMusic,5s Post,P7,Delta,48.501249345188306
+classicalMusic,5s Post,P8,Delta,128.00434315519982
+classicalMusic,5s Post,Fz,Delta,25.131434773721423
+classicalMusic,5s Post,Cz,Delta,32.87214834135043
+classicalMusic,5s Post,Pz,Delta,37.239890359644995
+classicalMusic,5s Post,Oz,Delta,36.411573040323034
+classicalMusic,5s Post,FC1,Delta,153.94286585084734
+classicalMusic,5s Post,FC2,Delta,95.14648060276465
+classicalMusic,5s Post,CP1,Delta,173.29994471792176
+classicalMusic,5s Post,CP2,Delta,62.730354263179166
+classicalMusic,5s Post,FC5,Delta,434.70948605474194
+classicalMusic,5s Post,FC6,Delta,158.10896172123662
+classicalMusic,5s Post,CP5,Delta,192.33387182478842
+classicalMusic,5s Post,CP6,Delta,157.73097493933165
+classicalMusic,5s Post,TP9,Delta,170.28849845400285
+classicalMusic,5s Post,TP10,Delta,103.38788687178112
+classicalMusic,5s Post,POz,Delta,45.13377757459187
+genMusic01,Onset,Fp1,Delta,51.07191851120114
+genMusic01,Onset,Fp2,Delta,61.48766367828779
+genMusic01,Onset,F3,Delta,-6.778267671518513
+genMusic01,Onset,F4,Delta,59.55477645060647
+genMusic01,Onset,C3,Delta,115.14191576459325
+genMusic01,Onset,C4,Delta,48.7360760594568
+genMusic01,Onset,P3,Delta,72.92524119446128
+genMusic01,Onset,P4,Delta,44.0782619482961
+genMusic01,Onset,O1,Delta,3.7883852001269447
+genMusic01,Onset,O2,Delta,6.664198562723899
+genMusic01,Onset,F7,Delta,28.126463208853565
+genMusic01,Onset,F8,Delta,78.87717702224316
+genMusic01,Onset,T7,Delta,162.98163626069646
+genMusic01,Onset,T8,Delta,47.919320885385225
+genMusic01,Onset,P7,Delta,47.98988396302541
+genMusic01,Onset,P8,Delta,25.621299714303206
+genMusic01,Onset,Fz,Delta,13.393664505666479
+genMusic01,Onset,Cz,Delta,46.839454624049544
+genMusic01,Onset,Pz,Delta,106.91758473353025
+genMusic01,Onset,Oz,Delta,15.99314660573865
+genMusic01,Onset,FC1,Delta,140.14042704976495
+genMusic01,Onset,FC2,Delta,83.65078771355371
+genMusic01,Onset,CP1,Delta,50.092553014882085
+genMusic01,Onset,CP2,Delta,55.97552789963731
+genMusic01,Onset,FC5,Delta,35.558514421878115
+genMusic01,Onset,FC6,Delta,31.906985147945857
+genMusic01,Onset,CP5,Delta,80.58522654760725
+genMusic01,Onset,CP6,Delta,23.419785045410183
+genMusic01,Onset,TP9,Delta,170.1535190266786
+genMusic01,Onset,TP10,Delta,152.63550837958647
+genMusic01,Onset,POz,Delta,35.462825383281434
+genMusic01,2s Post,Fp1,Delta,194.73175977324092
+genMusic01,2s Post,Fp2,Delta,205.83945698244182
+genMusic01,2s Post,F3,Delta,34.289645693597805
+genMusic01,2s Post,F4,Delta,133.46238006571625
+genMusic01,2s Post,C3,Delta,62.225048835874965
+genMusic01,2s Post,C4,Delta,64.19385519841963
+genMusic01,2s Post,P3,Delta,74.86598727602487
+genMusic01,2s Post,P4,Delta,37.73409421470332
+genMusic01,2s Post,O1,Delta,16.78487119646354
+genMusic01,2s Post,O2,Delta,29.137569471645648
+genMusic01,2s Post,F7,Delta,34.99167251986269
+genMusic01,2s Post,F8,Delta,115.29254199268445
+genMusic01,2s Post,T7,Delta,80.33572617776214
+genMusic01,2s Post,T8,Delta,90.28477278238987
+genMusic01,2s Post,P7,Delta,21.12593307603707
+genMusic01,2s Post,P8,Delta,78.74012304743633
+genMusic01,2s Post,Fz,Delta,48.307805956158
+genMusic01,2s Post,Cz,Delta,91.56813177552536
+genMusic01,2s Post,Pz,Delta,18.107601645525246
+genMusic01,2s Post,Oz,Delta,35.39411306775208
+genMusic01,2s Post,FC1,Delta,25.076172938532228
+genMusic01,2s Post,FC2,Delta,229.21019355009173
+genMusic01,2s Post,CP1,Delta,3.1003444421459943
+genMusic01,2s Post,CP2,Delta,47.37085814892053
+genMusic01,2s Post,FC5,Delta,59.77221629338563
+genMusic01,2s Post,FC6,Delta,97.68090585657107
+genMusic01,2s Post,CP5,Delta,82.74504283794134
+genMusic01,2s Post,CP6,Delta,54.783128087395035
+genMusic01,2s Post,TP9,Delta,137.26531108953205
+genMusic01,2s Post,TP10,Delta,71.82853706786587
+genMusic01,2s Post,POz,Delta,45.061030495028284
+genMusic01,5s Post,Fp1,Delta,112.30404158192721
+genMusic01,5s Post,Fp2,Delta,116.04177644238462
+genMusic01,5s Post,F3,Delta,27.57315304667091
+genMusic01,5s Post,F4,Delta,46.1884888438898
+genMusic01,5s Post,C3,Delta,119.89995793841504
+genMusic01,5s Post,C4,Delta,30.407470492806688
+genMusic01,5s Post,P3,Delta,42.66420082622792
+genMusic01,5s Post,P4,Delta,17.294309701033402
+genMusic01,5s Post,O1,Delta,15.57190819108519
+genMusic01,5s Post,O2,Delta,3.3738884141755063
+genMusic01,5s Post,F7,Delta,22.36436119705763
+genMusic01,5s Post,F8,Delta,71.79850129953203
+genMusic01,5s Post,T7,Delta,88.28129963375815
+genMusic01,5s Post,T8,Delta,84.61012688179473
+genMusic01,5s Post,P7,Delta,40.40966312018539
+genMusic01,5s Post,P8,Delta,53.81279947729621
+genMusic01,5s Post,Fz,Delta,47.07517923034157
+genMusic01,5s Post,Cz,Delta,8.945646910479274
+genMusic01,5s Post,Pz,Delta,53.846769629739725
+genMusic01,5s Post,Oz,Delta,7.630337289923669
+genMusic01,5s Post,FC1,Delta,61.700738710279595
+genMusic01,5s Post,FC2,Delta,30.205160537764353
+genMusic01,5s Post,CP1,Delta,34.755489141550555
+genMusic01,5s Post,CP2,Delta,4.095343873180354
+genMusic01,5s Post,FC5,Delta,45.496719866425885
+genMusic01,5s Post,FC6,Delta,54.03089464300905
+genMusic01,5s Post,CP5,Delta,57.869145786081006
+genMusic01,5s Post,CP6,Delta,33.5474149137375
+genMusic01,5s Post,TP9,Delta,59.72739355970476
+genMusic01,5s Post,TP10,Delta,43.46644696776191
+genMusic01,5s Post,POz,Delta,30.83788957863208
+genMusic02,Onset,Fp1,Delta,34.6336847133146
+genMusic02,Onset,Fp2,Delta,77.85118502944698
+genMusic02,Onset,F3,Delta,10.005348402019589
+genMusic02,Onset,F4,Delta,84.94325639046197
+genMusic02,Onset,C3,Delta,119.60672945841515
+genMusic02,Onset,C4,Delta,132.52936316340916
+genMusic02,Onset,P3,Delta,74.48556005981591
+genMusic02,Onset,P4,Delta,40.86603939303397
+genMusic02,Onset,O1,Delta,162.8078190192734
+genMusic02,Onset,O2,Delta,103.19382921641869
+genMusic02,Onset,F7,Delta,74.01483185328465
+genMusic02,Onset,F8,Delta,147.9001950202061
+genMusic02,Onset,T7,Delta,61.40338169819581
+genMusic02,Onset,T8,Delta,93.65233904602476
+genMusic02,Onset,P7,Delta,184.17882080591892
+genMusic02,Onset,P8,Delta,97.50171926982154
+genMusic02,Onset,Fz,Delta,24.276098517919202
+genMusic02,Onset,Cz,Delta,79.33660873400589
+genMusic02,Onset,Pz,Delta,79.7583076692189
+genMusic02,Onset,Oz,Delta,103.31308295791725
+genMusic02,Onset,FC1,Delta,69.13775086739547
+genMusic02,Onset,FC2,Delta,104.74822252505368
+genMusic02,Onset,CP1,Delta,88.21651087445744
+genMusic02,Onset,CP2,Delta,62.128511733843034
+genMusic02,Onset,FC5,Delta,100.91367675198725
+genMusic02,Onset,FC6,Delta,196.6165133975319
+genMusic02,Onset,CP5,Delta,124.28424858415545
+genMusic02,Onset,CP6,Delta,80.76367471868588
+genMusic02,Onset,TP9,Delta,183.22633962939
+genMusic02,Onset,TP10,Delta,121.27453340628183
+genMusic02,Onset,POz,Delta,103.93742287605826
+genMusic02,2s Post,Fp1,Delta,62.03877367178239
+genMusic02,2s Post,Fp2,Delta,21.839885499116715
+genMusic02,2s Post,F3,Delta,68.86128882340842
+genMusic02,2s Post,F4,Delta,32.15984389200663
+genMusic02,2s Post,C3,Delta,44.7829589967862
+genMusic02,2s Post,C4,Delta,79.71442561425555
+genMusic02,2s Post,P3,Delta,39.05798982291537
+genMusic02,2s Post,P4,Delta,63.49997358714605
+genMusic02,2s Post,O1,Delta,171.2606047808758
+genMusic02,2s Post,O2,Delta,101.99549579930442
+genMusic02,2s Post,F7,Delta,131.06273966469237
+genMusic02,2s Post,F8,Delta,19.87822643232444
+genMusic02,2s Post,T7,Delta,52.80663499310656
+genMusic02,2s Post,T8,Delta,11.68451201396605
+genMusic02,2s Post,P7,Delta,74.87362448278867
+genMusic02,2s Post,P8,Delta,40.38187254010767
+genMusic02,2s Post,Fz,Delta,18.350433587401337
+genMusic02,2s Post,Cz,Delta,78.55870067646624
+genMusic02,2s Post,Pz,Delta,62.075166808855116
+genMusic02,2s Post,Oz,Delta,122.01333640811926
+genMusic02,2s Post,FC1,Delta,67.76466216135708
+genMusic02,2s Post,FC2,Delta,97.72605545744572
+genMusic02,2s Post,CP1,Delta,64.39747745621914
+genMusic02,2s Post,CP2,Delta,51.56275251741821
+genMusic02,2s Post,FC5,Delta,108.56320675174292
+genMusic02,2s Post,FC6,Delta,45.84510224567124
+genMusic02,2s Post,CP5,Delta,43.96452231618249
+genMusic02,2s Post,CP6,Delta,40.38081395038077
+genMusic02,2s Post,TP9,Delta,46.84523047366523
+genMusic02,2s Post,TP10,Delta,16.884961662811186
+genMusic02,2s Post,POz,Delta,42.0083643709164
+genMusic02,5s Post,Fp1,Delta,165.4622730397352
+genMusic02,5s Post,Fp2,Delta,195.4498655259606
+genMusic02,5s Post,F3,Delta,156.70855957992123
+genMusic02,5s Post,F4,Delta,481.02943192451
+genMusic02,5s Post,C3,Delta,485.40029920576126
+genMusic02,5s Post,C4,Delta,445.27950269778796
+genMusic02,5s Post,P3,Delta,369.32681777251395
+genMusic02,5s Post,P4,Delta,290.0728929416753
+genMusic02,5s Post,O1,Delta,394.99143870617394
+genMusic02,5s Post,O2,Delta,373.76632348509605
+genMusic02,5s Post,F7,Delta,340.8873621125506
+genMusic02,5s Post,F8,Delta,316.3985393577741
+genMusic02,5s Post,T7,Delta,188.46734112211197
+genMusic02,5s Post,T8,Delta,298.84280102539395
+genMusic02,5s Post,P7,Delta,295.91619789508553
+genMusic02,5s Post,P8,Delta,290.6657657141566
+genMusic02,5s Post,Fz,Delta,130.28548541934128
+genMusic02,5s Post,Cz,Delta,91.30254996564872
+genMusic02,5s Post,Pz,Delta,166.32250315542953
+genMusic02,5s Post,Oz,Delta,387.31651100257216
+genMusic02,5s Post,FC1,Delta,205.73573695796458
+genMusic02,5s Post,FC2,Delta,268.3730745908129
+genMusic02,5s Post,CP1,Delta,492.0849251559735
+genMusic02,5s Post,CP2,Delta,141.8456862850484
+genMusic02,5s Post,FC5,Delta,546.9894770949672
+genMusic02,5s Post,FC6,Delta,692.8894276973056
+genMusic02,5s Post,CP5,Delta,481.7370045027102
+genMusic02,5s Post,CP6,Delta,407.1984632446511
+genMusic02,5s Post,TP9,Delta,236.81752438291358
+genMusic02,5s Post,TP10,Delta,260.012936464145
+genMusic02,5s Post,POz,Delta,254.86328574938216
+genMusic03,Onset,Fp1,Delta,139.51018092264212
+genMusic03,Onset,Fp2,Delta,121.93464778977638
+genMusic03,Onset,F3,Delta,118.5434473006936
+genMusic03,Onset,F4,Delta,111.49116272942143
+genMusic03,Onset,C3,Delta,170.66199633850465
+genMusic03,Onset,C4,Delta,230.54307049305166
+genMusic03,Onset,P3,Delta,106.83388170641902
+genMusic03,Onset,P4,Delta,156.12608390654572
+genMusic03,Onset,O1,Delta,64.59643224478809
+genMusic03,Onset,O2,Delta,118.96626132520625
+genMusic03,Onset,F7,Delta,119.15994290747072
+genMusic03,Onset,F8,Delta,123.62823885650974
+genMusic03,Onset,T7,Delta,105.67055003279482
+genMusic03,Onset,T8,Delta,149.947337352801
+genMusic03,Onset,P7,Delta,64.44530196999915
+genMusic03,Onset,P8,Delta,175.9186805970808
+genMusic03,Onset,Fz,Delta,85.7630927615449
+genMusic03,Onset,Cz,Delta,121.7687412889359
+genMusic03,Onset,Pz,Delta,84.50000118243524
+genMusic03,Onset,Oz,Delta,121.39466714692969
+genMusic03,Onset,FC1,Delta,204.78045282557534
+genMusic03,Onset,FC2,Delta,209.81817643003805
+genMusic03,Onset,CP1,Delta,131.43341803360445
+genMusic03,Onset,CP2,Delta,112.17951814238127
+genMusic03,Onset,FC5,Delta,156.41792441367227
+genMusic03,Onset,FC6,Delta,191.60278166562816
+genMusic03,Onset,CP5,Delta,169.3123515785782
+genMusic03,Onset,CP6,Delta,201.5277071064641
+genMusic03,Onset,TP9,Delta,94.20184739394305
+genMusic03,Onset,TP10,Delta,192.05118784348164
+genMusic03,Onset,POz,Delta,91.60692831127326
+genMusic03,2s Post,Fp1,Delta,118.14960109086881
+genMusic03,2s Post,Fp2,Delta,231.68899013267136
+genMusic03,2s Post,F3,Delta,130.21667362144257
+genMusic03,2s Post,F4,Delta,206.57775996067394
+genMusic03,2s Post,C3,Delta,109.43847296710582
+genMusic03,2s Post,C4,Delta,169.94362097337404
+genMusic03,2s Post,P3,Delta,193.64004683464813
+genMusic03,2s Post,P4,Delta,142.94989271435014
+genMusic03,2s Post,O1,Delta,177.8516859435331
+genMusic03,2s Post,O2,Delta,124.4932270086085
+genMusic03,2s Post,F7,Delta,87.21810016478038
+genMusic03,2s Post,F8,Delta,161.631917173024
+genMusic03,2s Post,T7,Delta,142.14146526060875
+genMusic03,2s Post,T8,Delta,101.20906771492828
+genMusic03,2s Post,P7,Delta,178.82606651162385
+genMusic03,2s Post,P8,Delta,123.65700334626106
+genMusic03,2s Post,Fz,Delta,125.1822819413406
+genMusic03,2s Post,Cz,Delta,39.454509563325495
+genMusic03,2s Post,Pz,Delta,80.29450498883875
+genMusic03,2s Post,Oz,Delta,129.13882483995476
+genMusic03,2s Post,FC1,Delta,153.14390915244843
+genMusic03,2s Post,FC2,Delta,128.58614614083825
+genMusic03,2s Post,CP1,Delta,55.04258455047763
+genMusic03,2s Post,CP2,Delta,131.87594556722954
+genMusic03,2s Post,FC5,Delta,113.65444354642244
+genMusic03,2s Post,FC6,Delta,212.42797208718434
+genMusic03,2s Post,CP5,Delta,216.95566090496519
+genMusic03,2s Post,CP6,Delta,151.2274557339288
+genMusic03,2s Post,TP9,Delta,108.5690765078801
+genMusic03,2s Post,TP10,Delta,97.64655952702489
+genMusic03,2s Post,POz,Delta,128.94821901413846
+genMusic03,5s Post,Fp1,Delta,177.92971965997987
+genMusic03,5s Post,Fp2,Delta,162.28777975624516
+genMusic03,5s Post,F3,Delta,304.63829917119926
+genMusic03,5s Post,F4,Delta,193.88005231310922
+genMusic03,5s Post,C3,Delta,343.78784087529823
+genMusic03,5s Post,C4,Delta,266.9715916223169
+genMusic03,5s Post,P3,Delta,168.0405920883794
+genMusic03,5s Post,P4,Delta,303.0365713559095
+genMusic03,5s Post,O1,Delta,40.389704468124
+genMusic03,5s Post,O2,Delta,136.7206465367762
+genMusic03,5s Post,F7,Delta,186.63363601105007
+genMusic03,5s Post,F8,Delta,162.04795966474416
+genMusic03,5s Post,T7,Delta,204.09752347653813
+genMusic03,5s Post,T8,Delta,219.79447499207052
+genMusic03,5s Post,P7,Delta,161.76094983511058
+genMusic03,5s Post,P8,Delta,154.40361567550679
+genMusic03,5s Post,Fz,Delta,123.95848985227842
+genMusic03,5s Post,Cz,Delta,76.44914647092537
+genMusic03,5s Post,Pz,Delta,46.48074764004732
+genMusic03,5s Post,Oz,Delta,112.0869694983782
+genMusic03,5s Post,FC1,Delta,438.2702891381948
+genMusic03,5s Post,FC2,Delta,173.47535962191284
+genMusic03,5s Post,CP1,Delta,257.1979669055841
+genMusic03,5s Post,CP2,Delta,238.12157475369645
+genMusic03,5s Post,FC5,Delta,273.361347136021
+genMusic03,5s Post,FC6,Delta,256.25802182803193
+genMusic03,5s Post,CP5,Delta,278.21250463476144
+genMusic03,5s Post,CP6,Delta,311.1979899539078
+genMusic03,5s Post,TP9,Delta,90.45305501653388
+genMusic03,5s Post,TP10,Delta,193.21059355108926
+genMusic03,5s Post,POz,Delta,97.36212789627072
+classicalMusic,Onset,Fp1,Alpha,20.391791610328916
+classicalMusic,Onset,Fp2,Alpha,5.53955724657178
+classicalMusic,Onset,F3,Alpha,26.083437698557383
+classicalMusic,Onset,F4,Alpha,9.872180529489336
+classicalMusic,Onset,C3,Alpha,69.07551655434858
+classicalMusic,Onset,C4,Alpha,7.740549340746569
+classicalMusic,Onset,P3,Alpha,21.128624792563652
+classicalMusic,Onset,P4,Alpha,20.95367662137662
+classicalMusic,Onset,O1,Alpha,-13.163844425796194
+classicalMusic,Onset,O2,Alpha,-7.9001550438484145
+classicalMusic,Onset,F7,Alpha,106.99532885759989
+classicalMusic,Onset,F8,Alpha,4.917734553138662
+classicalMusic,Onset,T7,Alpha,36.65630586251986
+classicalMusic,Onset,T8,Alpha,52.85186604446047
+classicalMusic,Onset,P7,Alpha,8.642938379985202
+classicalMusic,Onset,P8,Alpha,1.5304519192716026
+classicalMusic,Onset,Fz,Alpha,11.283566867614358
+classicalMusic,Onset,Cz,Alpha,-4.590656772816696
+classicalMusic,Onset,Pz,Alpha,26.784927737511527
+classicalMusic,Onset,Oz,Alpha,-7.788713396215479
+classicalMusic,Onset,FC1,Alpha,12.025532302250147
+classicalMusic,Onset,FC2,Alpha,-15.251036791646365
+classicalMusic,Onset,CP1,Alpha,28.952942995754054
+classicalMusic,Onset,CP2,Alpha,0.3056274365281896
+classicalMusic,Onset,FC5,Alpha,88.53072337950496
+classicalMusic,Onset,FC6,Alpha,15.007696666213326
+classicalMusic,Onset,CP5,Alpha,19.254560761658134
+classicalMusic,Onset,CP6,Alpha,14.800901781031873
+classicalMusic,Onset,TP9,Alpha,13.109226165525545
+classicalMusic,Onset,TP10,Alpha,14.819396843866897
+classicalMusic,Onset,POz,Alpha,-10.152548589392982
+classicalMusic,2s Post,Fp1,Alpha,40.15454292420651
+classicalMusic,2s Post,Fp2,Alpha,23.79287094587036
+classicalMusic,2s Post,F3,Alpha,-2.4106916151732145
+classicalMusic,2s Post,F4,Alpha,-11.599908857604728
+classicalMusic,2s Post,C3,Alpha,-7.193301209779592
+classicalMusic,2s Post,C4,Alpha,-3.6097328032038973
+classicalMusic,2s Post,P3,Alpha,44.32963773123412
+classicalMusic,2s Post,P4,Alpha,53.00772011837169
+classicalMusic,2s Post,O1,Alpha,38.92732647360015
+classicalMusic,2s Post,O2,Alpha,55.984150948420165
+classicalMusic,2s Post,F7,Alpha,19.87297197212729
+classicalMusic,2s Post,F8,Alpha,-10.612945230091835
+classicalMusic,2s Post,T7,Alpha,0.018086302357299848
+classicalMusic,2s Post,T8,Alpha,-16.96056751763744
+classicalMusic,2s Post,P7,Alpha,33.279450745795096
+classicalMusic,2s Post,P8,Alpha,4.650721406228736
+classicalMusic,2s Post,Fz,Alpha,36.82792510260784
+classicalMusic,2s Post,Cz,Alpha,7.9268830078192165
+classicalMusic,2s Post,Pz,Alpha,63.458657698971095
+classicalMusic,2s Post,Oz,Alpha,45.19247349198269
+classicalMusic,2s Post,FC1,Alpha,9.424034022696599
+classicalMusic,2s Post,FC2,Alpha,22.65563351717967
+classicalMusic,2s Post,CP1,Alpha,-0.930918091019724
+classicalMusic,2s Post,CP2,Alpha,12.568325627033014
+classicalMusic,2s Post,FC5,Alpha,-16.924639133349448
+classicalMusic,2s Post,FC6,Alpha,-10.904479481230075
+classicalMusic,2s Post,CP5,Alpha,-0.2355271848384908
+classicalMusic,2s Post,CP6,Alpha,-11.144784597176045
+classicalMusic,2s Post,TP9,Alpha,15.545211129051493
+classicalMusic,2s Post,TP10,Alpha,-16.131080028876035
+classicalMusic,2s Post,POz,Alpha,56.417529305704626
+classicalMusic,5s Post,Fp1,Alpha,66.49571036434102
+classicalMusic,5s Post,Fp2,Alpha,21.996842089758974
+classicalMusic,5s Post,F3,Alpha,15.963471868227918
+classicalMusic,5s Post,F4,Alpha,11.259628730341083
+classicalMusic,5s Post,C3,Alpha,4.508259471716186
+classicalMusic,5s Post,C4,Alpha,-8.135296436421426
+classicalMusic,5s Post,P3,Alpha,50.65703894777305
+classicalMusic,5s Post,P4,Alpha,76.63958396520674
+classicalMusic,5s Post,O1,Alpha,41.821254155920656
+classicalMusic,5s Post,O2,Alpha,36.13997289368173
+classicalMusic,5s Post,F7,Alpha,58.95610701524612
+classicalMusic,5s Post,F8,Alpha,3.8785985149971234
+classicalMusic,5s Post,T7,Alpha,43.07011510253854
+classicalMusic,5s Post,T8,Alpha,-11.339154829491633
+classicalMusic,5s Post,P7,Alpha,48.33681721402146
+classicalMusic,5s Post,P8,Alpha,19.49841018971336
+classicalMusic,5s Post,Fz,Alpha,43.46805897897931
+classicalMusic,5s Post,Cz,Alpha,-5.20455306688526
+classicalMusic,5s Post,Pz,Alpha,63.189981724636915
+classicalMusic,5s Post,Oz,Alpha,35.59282274933212
+classicalMusic,5s Post,FC1,Alpha,22.163939746644548
+classicalMusic,5s Post,FC2,Alpha,11.452058441529491
+classicalMusic,5s Post,CP1,Alpha,9.525161092905918
+classicalMusic,5s Post,CP2,Alpha,17.181054281930532
+classicalMusic,5s Post,FC5,Alpha,36.55346016654782
+classicalMusic,5s Post,FC6,Alpha,-1.070422854332845
+classicalMusic,5s Post,CP5,Alpha,42.48255025497214
+classicalMusic,5s Post,CP6,Alpha,2.0899344039543712
+classicalMusic,5s Post,TP9,Alpha,50.02411641074999
+classicalMusic,5s Post,TP10,Alpha,0.6520208861312743
+classicalMusic,5s Post,POz,Alpha,32.23758926556501
+genMusic01,Onset,Fp1,Alpha,48.359971059668986
+genMusic01,Onset,Fp2,Alpha,65.85197575725245
+genMusic01,Onset,F3,Alpha,44.027171815099706
+genMusic01,Onset,F4,Alpha,30.329916410476574
+genMusic01,Onset,C3,Alpha,61.321765450349886
+genMusic01,Onset,C4,Alpha,34.62525047770609
+genMusic01,Onset,P3,Alpha,89.64736465272266
+genMusic01,Onset,P4,Alpha,38.4218827789292
+genMusic01,Onset,O1,Alpha,61.1546075902834
+genMusic01,Onset,O2,Alpha,42.90181488185023
+genMusic01,Onset,F7,Alpha,29.188148951024885
+genMusic01,Onset,F8,Alpha,54.18859220023199
+genMusic01,Onset,T7,Alpha,69.92492861742458
+genMusic01,Onset,T8,Alpha,49.0114525719992
+genMusic01,Onset,P7,Alpha,69.50213687851763
+genMusic01,Onset,P8,Alpha,30.947852763704617
+genMusic01,Onset,Fz,Alpha,54.48833190364229
+genMusic01,Onset,Cz,Alpha,32.09709852056832
+genMusic01,Onset,Pz,Alpha,108.61813225695484
+genMusic01,Onset,Oz,Alpha,47.03537933119077
+genMusic01,Onset,FC1,Alpha,38.912082605003064
+genMusic01,Onset,FC2,Alpha,52.18859444634948
+genMusic01,Onset,CP1,Alpha,35.71386334441695
+genMusic01,Onset,CP2,Alpha,76.02557194985127
+genMusic01,Onset,FC5,Alpha,54.32357105431818
+genMusic01,Onset,FC6,Alpha,45.990203825664366
+genMusic01,Onset,CP5,Alpha,48.36936463468034
+genMusic01,Onset,CP6,Alpha,44.15176855212505
+genMusic01,Onset,TP9,Alpha,82.47014963984874
+genMusic01,Onset,TP10,Alpha,48.16479559457832
+genMusic01,Onset,POz,Alpha,84.85048385558018
+genMusic01,2s Post,Fp1,Alpha,21.64956686475522
+genMusic01,2s Post,Fp2,Alpha,8.854987726302474
+genMusic01,2s Post,F3,Alpha,7.280629673437699
+genMusic01,2s Post,F4,Alpha,-0.36943913509498394
+genMusic01,2s Post,C3,Alpha,7.344158484000305
+genMusic01,2s Post,C4,Alpha,34.16411415248046
+genMusic01,2s Post,P3,Alpha,-12.198346586942105
+genMusic01,2s Post,P4,Alpha,3.389303403837916
+genMusic01,2s Post,O1,Alpha,9.997498600296803
+genMusic01,2s Post,O2,Alpha,16.123747706806018
+genMusic01,2s Post,F7,Alpha,3.1402183853591463
+genMusic01,2s Post,F8,Alpha,-0.008304789209263141
+genMusic01,2s Post,T7,Alpha,12.875731429393111
+genMusic01,2s Post,T8,Alpha,7.606595868503749
+genMusic01,2s Post,P7,Alpha,7.4912091047722855
+genMusic01,2s Post,P8,Alpha,9.930677188748243
+genMusic01,2s Post,Fz,Alpha,21.55551751072008
+genMusic01,2s Post,Cz,Alpha,34.38590290213867
+genMusic01,2s Post,Pz,Alpha,0.8382194633768254
+genMusic01,2s Post,Oz,Alpha,22.35196027064545
+genMusic01,2s Post,FC1,Alpha,16.330034986776436
+genMusic01,2s Post,FC2,Alpha,31.750388979137025
+genMusic01,2s Post,CP1,Alpha,0.7771185586820117
+genMusic01,2s Post,CP2,Alpha,29.49529092598169
+genMusic01,2s Post,FC5,Alpha,26.067816119872425
+genMusic01,2s Post,FC6,Alpha,5.747991900023015
+genMusic01,2s Post,CP5,Alpha,2.2413928466973334
+genMusic01,2s Post,CP6,Alpha,22.78797253106043
+genMusic01,2s Post,TP9,Alpha,20.825612466702232
+genMusic01,2s Post,TP10,Alpha,15.471966154008028
+genMusic01,2s Post,POz,Alpha,3.6337505566727772
+genMusic01,5s Post,Fp1,Alpha,20.528839533809652
+genMusic01,5s Post,Fp2,Alpha,13.66642927220076
+genMusic01,5s Post,F3,Alpha,24.82489369053398
+genMusic01,5s Post,F4,Alpha,9.420273930256505
+genMusic01,5s Post,C3,Alpha,19.919998114629042
+genMusic01,5s Post,C4,Alpha,14.215615303597733
+genMusic01,5s Post,P3,Alpha,12.348338723789283
+genMusic01,5s Post,P4,Alpha,15.958600722083624
+genMusic01,5s Post,O1,Alpha,35.359995855932794
+genMusic01,5s Post,O2,Alpha,28.552969929048338
+genMusic01,5s Post,F7,Alpha,3.642360707149404
+genMusic01,5s Post,F8,Alpha,22.61205033821265
+genMusic01,5s Post,T7,Alpha,35.52844420683294
+genMusic01,5s Post,T8,Alpha,20.34650312103359
+genMusic01,5s Post,P7,Alpha,35.45140312780691
+genMusic01,5s Post,P8,Alpha,18.93950523560806
+genMusic01,5s Post,Fz,Alpha,29.994711153665246
+genMusic01,5s Post,Cz,Alpha,-6.54683483314243
+genMusic01,5s Post,Pz,Alpha,5.288609773612597
+genMusic01,5s Post,Oz,Alpha,38.72770905034897
+genMusic01,5s Post,FC1,Alpha,14.943517049470216
+genMusic01,5s Post,FC2,Alpha,17.96327263321894
+genMusic01,5s Post,CP1,Alpha,-5.093926935760704
+genMusic01,5s Post,CP2,Alpha,8.497267729740855
+genMusic01,5s Post,FC5,Alpha,22.260769975891602
+genMusic01,5s Post,FC6,Alpha,26.38830818159083
+genMusic01,5s Post,CP5,Alpha,11.748339188076999
+genMusic01,5s Post,CP6,Alpha,10.09183138375414
+genMusic01,5s Post,TP9,Alpha,22.99597237238778
+genMusic01,5s Post,TP10,Alpha,10.843147528278068
+genMusic01,5s Post,POz,Alpha,20.829940231541954
+genMusic02,Onset,Fp1,Alpha,70.81218025892953
+genMusic02,Onset,Fp2,Alpha,44.06136917034096
+genMusic02,Onset,F3,Alpha,49.740946954809615
+genMusic02,Onset,F4,Alpha,82.11474012344031
+genMusic02,Onset,C3,Alpha,12.835798767970084
+genMusic02,Onset,C4,Alpha,44.570183591887705
+genMusic02,Onset,P3,Alpha,21.694448628002355
+genMusic02,Onset,P4,Alpha,126.1341041448913
+genMusic02,Onset,O1,Alpha,42.91589961865633
+genMusic02,Onset,O2,Alpha,108.2765913862435
+genMusic02,Onset,F7,Alpha,73.0053670747275
+genMusic02,Onset,F8,Alpha,39.48482978487031
+genMusic02,Onset,T7,Alpha,41.59112672177498
+genMusic02,Onset,T8,Alpha,18.1297046531073
+genMusic02,Onset,P7,Alpha,9.013213190140558
+genMusic02,Onset,P8,Alpha,91.39573599052216
+genMusic02,Onset,Fz,Alpha,84.23904171790265
+genMusic02,Onset,Cz,Alpha,30.998581432477366
+genMusic02,Onset,Pz,Alpha,30.058676333363266
+genMusic02,Onset,Oz,Alpha,75.94733073373673
+genMusic02,Onset,FC1,Alpha,63.570963254835064
+genMusic02,Onset,FC2,Alpha,61.538041560535426
+genMusic02,Onset,CP1,Alpha,16.80379286740574
+genMusic02,Onset,CP2,Alpha,24.467033010865205
+genMusic02,Onset,FC5,Alpha,97.89483628178357
+genMusic02,Onset,FC6,Alpha,45.27368818092333
+genMusic02,Onset,CP5,Alpha,24.997511309342666
+genMusic02,Onset,CP6,Alpha,47.75549132792244
+genMusic02,Onset,TP9,Alpha,42.089277316399816
+genMusic02,Onset,TP10,Alpha,79.69618872999325
+genMusic02,Onset,POz,Alpha,74.1624096978997
+genMusic02,2s Post,Fp1,Alpha,6.3078555414264255
+genMusic02,2s Post,Fp2,Alpha,10.944050699895149
+genMusic02,2s Post,F3,Alpha,-1.8625707137594882
+genMusic02,2s Post,F4,Alpha,21.79897714915931
+genMusic02,2s Post,C3,Alpha,-16.462151963019423
+genMusic02,2s Post,C4,Alpha,17.372509698556183
+genMusic02,2s Post,P3,Alpha,-7.361776558321978
+genMusic02,2s Post,P4,Alpha,42.073722164861735
+genMusic02,2s Post,O1,Alpha,9.411401407604622
+genMusic02,2s Post,O2,Alpha,21.96551145521133
+genMusic02,2s Post,F7,Alpha,29.18043049764539
+genMusic02,2s Post,F8,Alpha,18.929116075298158
+genMusic02,2s Post,T7,Alpha,25.864770239496025
+genMusic02,2s Post,T8,Alpha,20.886615198824245
+genMusic02,2s Post,P7,Alpha,7.952678179005068
+genMusic02,2s Post,P8,Alpha,36.063060060906864
+genMusic02,2s Post,Fz,Alpha,10.098424507257569
+genMusic02,2s Post,Cz,Alpha,22.477579444532186
+genMusic02,2s Post,Pz,Alpha,7.900462985763164
+genMusic02,2s Post,Oz,Alpha,8.215020091931173
+genMusic02,2s Post,FC1,Alpha,33.155794571755536
+genMusic02,2s Post,FC2,Alpha,32.17558372858327
+genMusic02,2s Post,CP1,Alpha,-9.707577693373691
+genMusic02,2s Post,CP2,Alpha,17.96998423682119
+genMusic02,2s Post,FC5,Alpha,39.53789931303996
+genMusic02,2s Post,FC6,Alpha,25.739080492473747
+genMusic02,2s Post,CP5,Alpha,-3.372764213730264
+genMusic02,2s Post,CP6,Alpha,22.542803583683067
+genMusic02,2s Post,TP9,Alpha,9.077871851665618
+genMusic02,2s Post,TP10,Alpha,51.772334220747446
+genMusic02,2s Post,POz,Alpha,19.6565781015954
+genMusic02,5s Post,Fp1,Alpha,23.651264520392317
+genMusic02,5s Post,Fp2,Alpha,31.520646164151294
+genMusic02,5s Post,F3,Alpha,34.906285668753355
+genMusic02,5s Post,F4,Alpha,93.94726094164193
+genMusic02,5s Post,C3,Alpha,19.28222230321319
+genMusic02,5s Post,C4,Alpha,75.33615929576936
+genMusic02,5s Post,P3,Alpha,28.5768081053519
+genMusic02,5s Post,P4,Alpha,150.71417570967756
+genMusic02,5s Post,O1,Alpha,27.983779898425794
+genMusic02,5s Post,O2,Alpha,69.58590989064992
+genMusic02,5s Post,F7,Alpha,91.23818630105418
+genMusic02,5s Post,F8,Alpha,61.0453763218648
+genMusic02,5s Post,T7,Alpha,84.0215718535041
+genMusic02,5s Post,T8,Alpha,52.47588087784891
+genMusic02,5s Post,P7,Alpha,14.936478882013558
+genMusic02,5s Post,P8,Alpha,97.80397533396977
+genMusic02,5s Post,Fz,Alpha,21.701011194024062
+genMusic02,5s Post,Cz,Alpha,92.53741302847847
+genMusic02,5s Post,Pz,Alpha,101.14287823211154
+genMusic02,5s Post,Oz,Alpha,40.222586606724555
+genMusic02,5s Post,FC1,Alpha,60.2857000048296
+genMusic02,5s Post,FC2,Alpha,40.352623066831406
+genMusic02,5s Post,CP1,Alpha,62.203534189857606
+genMusic02,5s Post,CP2,Alpha,96.27651805509001
+genMusic02,5s Post,FC5,Alpha,82.546909914717
+genMusic02,5s Post,FC6,Alpha,79.28080195047268
+genMusic02,5s Post,CP5,Alpha,69.71669578190068
+genMusic02,5s Post,CP6,Alpha,78.7640567347066
+genMusic02,5s Post,TP9,Alpha,68.25936047006839
+genMusic02,5s Post,TP10,Alpha,74.70964949228608
+genMusic02,5s Post,POz,Alpha,69.10815063222724
+genMusic03,Onset,Fp1,Alpha,53.56754082610214
+genMusic03,Onset,Fp2,Alpha,39.40941396283171
+genMusic03,Onset,F3,Alpha,37.546690572057756
+genMusic03,Onset,F4,Alpha,17.700441045308402
+genMusic03,Onset,C3,Alpha,45.19302123869025
+genMusic03,Onset,C4,Alpha,54.88832846462401
+genMusic03,Onset,P3,Alpha,50.690411088424156
+genMusic03,Onset,P4,Alpha,19.791010426755555
+genMusic03,Onset,O1,Alpha,71.40413319482874
+genMusic03,Onset,O2,Alpha,31.807881154479393
+genMusic03,Onset,F7,Alpha,28.445586375789336
+genMusic03,Onset,F8,Alpha,62.112455244811315
+genMusic03,Onset,T7,Alpha,61.181187991070225
+genMusic03,Onset,T8,Alpha,83.6870208506757
+genMusic03,Onset,P7,Alpha,80.50981699518954
+genMusic03,Onset,P8,Alpha,24.34665314967091
+genMusic03,Onset,Fz,Alpha,51.076801884084695
+genMusic03,Onset,Cz,Alpha,41.96601329151699
+genMusic03,Onset,Pz,Alpha,37.21723570772343
+genMusic03,Onset,Oz,Alpha,51.440438314414955
+genMusic03,Onset,FC1,Alpha,25.08734132315596
+genMusic03,Onset,FC2,Alpha,27.990627697817693
+genMusic03,Onset,CP1,Alpha,43.700898994079495
+genMusic03,Onset,CP2,Alpha,27.226159117369356
+genMusic03,Onset,FC5,Alpha,33.39020601819467
+genMusic03,Onset,FC6,Alpha,71.13201979953146
+genMusic03,Onset,CP5,Alpha,48.71972326210445
+genMusic03,Onset,CP6,Alpha,26.458326923373342
+genMusic03,Onset,TP9,Alpha,82.14246145571062
+genMusic03,Onset,TP10,Alpha,50.144246218303984
+genMusic03,Onset,POz,Alpha,41.165853376749865
+genMusic03,2s Post,Fp1,Alpha,112.74650833600055
+genMusic03,2s Post,Fp2,Alpha,65.51414626320143
+genMusic03,2s Post,F3,Alpha,83.37671149404788
+genMusic03,2s Post,F4,Alpha,75.43523374150004
+genMusic03,2s Post,C3,Alpha,99.84176281564359
+genMusic03,2s Post,C4,Alpha,157.95154518011122
+genMusic03,2s Post,P3,Alpha,98.96400185649534
+genMusic03,2s Post,P4,Alpha,127.21874010559485
+genMusic03,2s Post,O1,Alpha,64.42145125791185
+genMusic03,2s Post,O2,Alpha,110.53790913864981
+genMusic03,2s Post,F7,Alpha,131.09499140833591
+genMusic03,2s Post,F8,Alpha,48.99826445045396
+genMusic03,2s Post,T7,Alpha,76.80849011984314
+genMusic03,2s Post,T8,Alpha,91.61921216457155
+genMusic03,2s Post,P7,Alpha,65.46090320782922
+genMusic03,2s Post,P8,Alpha,175.03732309418763
+genMusic03,2s Post,Fz,Alpha,74.50082696903885
+genMusic03,2s Post,Cz,Alpha,7.10419581361914
+genMusic03,2s Post,Pz,Alpha,26.79322702303157
+genMusic03,2s Post,Oz,Alpha,120.15332848549849
+genMusic03,2s Post,FC1,Alpha,50.646133148777494
+genMusic03,2s Post,FC2,Alpha,57.01286245796734
+genMusic03,2s Post,CP1,Alpha,34.638602733539614
+genMusic03,2s Post,CP2,Alpha,9.125993084617711
+genMusic03,2s Post,FC5,Alpha,128.28796956805292
+genMusic03,2s Post,FC6,Alpha,82.09781500603151
+genMusic03,2s Post,CP5,Alpha,90.72820754014
+genMusic03,2s Post,CP6,Alpha,159.14131441070245
+genMusic03,2s Post,TP9,Alpha,56.967168940534236
+genMusic03,2s Post,TP10,Alpha,118.5950799985013
+genMusic03,2s Post,POz,Alpha,101.54973797847633
+genMusic03,5s Post,Fp1,Alpha,56.025658168853425
+genMusic03,5s Post,Fp2,Alpha,56.900818537197225
+genMusic03,5s Post,F3,Alpha,98.3835102209581
+genMusic03,5s Post,F4,Alpha,21.397008404440456
+genMusic03,5s Post,C3,Alpha,122.61381175065542
+genMusic03,5s Post,C4,Alpha,56.538439503324625
+genMusic03,5s Post,P3,Alpha,29.788625802343418
+genMusic03,5s Post,P4,Alpha,38.35707594935218
+genMusic03,5s Post,O1,Alpha,50.415590177074876
+genMusic03,5s Post,O2,Alpha,39.65206028860649
+genMusic03,5s Post,F7,Alpha,104.06052369372033
+genMusic03,5s Post,F8,Alpha,58.32568622050115
+genMusic03,5s Post,T7,Alpha,88.03373133565955
+genMusic03,5s Post,T8,Alpha,99.72761221679652
+genMusic03,5s Post,P7,Alpha,86.50441946468786
+genMusic03,5s Post,P8,Alpha,53.42130230326042
+genMusic03,5s Post,Fz,Alpha,44.38807573564444
+genMusic03,5s Post,Cz,Alpha,46.26149518732082
+genMusic03,5s Post,Pz,Alpha,25.913412098896153
+genMusic03,5s Post,Oz,Alpha,43.306654968930104
+genMusic03,5s Post,FC1,Alpha,48.392091314041686
+genMusic03,5s Post,FC2,Alpha,42.610573976849224
+genMusic03,5s Post,CP1,Alpha,31.159577268993747
+genMusic03,5s Post,CP2,Alpha,19.32475437701551
+genMusic03,5s Post,FC5,Alpha,134.33730030969133
+genMusic03,5s Post,FC6,Alpha,72.96001025067137
+genMusic03,5s Post,CP5,Alpha,91.02621295339952
+genMusic03,5s Post,CP6,Alpha,42.696512068806015
+genMusic03,5s Post,TP9,Alpha,53.55342437039826
+genMusic03,5s Post,TP10,Alpha,118.72585714034486
+genMusic03,5s Post,POz,Alpha,13.58139524854403
+classicalMusic,Onset,Fp1,Beta,11.354300925868896
+classicalMusic,Onset,Fp2,Beta,4.045029472955652
+classicalMusic,Onset,F3,Beta,34.07602763601824
+classicalMusic,Onset,F4,Beta,5.370349418894754
+classicalMusic,Onset,C3,Beta,-5.52697000901639
+classicalMusic,Onset,C4,Beta,3.5549443501671782
+classicalMusic,Onset,P3,Beta,-0.4798234918456576
+classicalMusic,Onset,P4,Beta,9.240741644854898
+classicalMusic,Onset,O1,Beta,1.762769387373758
+classicalMusic,Onset,O2,Beta,0.7709564473766599
+classicalMusic,Onset,F7,Beta,-10.757239108308953
+classicalMusic,Onset,F8,Beta,-2.8782666136504247
+classicalMusic,Onset,T7,Beta,5.404212779985064
+classicalMusic,Onset,T8,Beta,15.371143734776952
+classicalMusic,Onset,P7,Beta,5.054488951913473
+classicalMusic,Onset,P8,Beta,2.8444533250264326
+classicalMusic,Onset,Fz,Beta,9.335712241190622
+classicalMusic,Onset,Cz,Beta,9.958703335877784
+classicalMusic,Onset,Pz,Beta,45.078514932624834
+classicalMusic,Onset,Oz,Beta,0.7795065356675595
+classicalMusic,Onset,FC1,Beta,-5.944985582609259
+classicalMusic,Onset,FC2,Beta,17.07158258746153
+classicalMusic,Onset,CP1,Beta,3.21218489415125
+classicalMusic,Onset,CP2,Beta,29.75081283568982
+classicalMusic,Onset,FC5,Beta,-2.4529067141178156
+classicalMusic,Onset,FC6,Beta,4.58901976756009
+classicalMusic,Onset,CP5,Beta,1.2723236858635754
+classicalMusic,Onset,CP6,Beta,8.298092712264495
+classicalMusic,Onset,TP9,Beta,9.256742254184562
+classicalMusic,Onset,TP10,Beta,8.64275095000618
+classicalMusic,Onset,POz,Beta,0.6150937954190715
+classicalMusic,2s Post,Fp1,Beta,19.295312980665074
+classicalMusic,2s Post,Fp2,Beta,-2.587144663097198
+classicalMusic,2s Post,F3,Beta,49.11544605241819
+classicalMusic,2s Post,F4,Beta,12.309181266895564
+classicalMusic,2s Post,C3,Beta,-17.738508137514156
+classicalMusic,2s Post,C4,Beta,-10.06855378582797
+classicalMusic,2s Post,P3,Beta,-0.6316004800663332
+classicalMusic,2s Post,P4,Beta,8.375514110045494
+classicalMusic,2s Post,O1,Beta,16.37071551851158
+classicalMusic,2s Post,O2,Beta,8.787351933471031
+classicalMusic,2s Post,F7,Beta,-19.668917034246878
+classicalMusic,2s Post,F8,Beta,-7.914991604855969
+classicalMusic,2s Post,T7,Beta,-9.45042351946839
+classicalMusic,2s Post,T8,Beta,-13.541280440454255
+classicalMusic,2s Post,P7,Beta,-7.532179163493027
+classicalMusic,2s Post,P8,Beta,-2.539687214529586
+classicalMusic,2s Post,Fz,Beta,10.421967164418602
+classicalMusic,2s Post,Cz,Beta,7.072718614555148
+classicalMusic,2s Post,Pz,Beta,5.8174264009569905
+classicalMusic,2s Post,Oz,Beta,7.57984039724182
+classicalMusic,2s Post,FC1,Beta,-0.6696245120115014
+classicalMusic,2s Post,FC2,Beta,3.5426117079310417
+classicalMusic,2s Post,CP1,Beta,15.064544966939982
+classicalMusic,2s Post,CP2,Beta,8.41904352308807
+classicalMusic,2s Post,FC5,Beta,-13.443289246670407
+classicalMusic,2s Post,FC6,Beta,-13.318269407675652
+classicalMusic,2s Post,CP5,Beta,-7.30589837183943
+classicalMusic,2s Post,CP6,Beta,3.489996230933243
+classicalMusic,2s Post,TP9,Beta,9.626396962791173
+classicalMusic,2s Post,TP10,Beta,-4.200716080064718
+classicalMusic,2s Post,POz,Beta,11.191025561928637
+classicalMusic,5s Post,Fp1,Beta,14.960563789126764
+classicalMusic,5s Post,Fp2,Beta,0.9019527616321962
+classicalMusic,5s Post,F3,Beta,60.84649928559073
+classicalMusic,5s Post,F4,Beta,10.575831085067415
+classicalMusic,5s Post,C3,Beta,-9.130185849586862
+classicalMusic,5s Post,C4,Beta,2.6207960931801964
+classicalMusic,5s Post,P3,Beta,-5.821769281453656
+classicalMusic,5s Post,P4,Beta,-8.05248023979345
+classicalMusic,5s Post,O1,Beta,17.295806547467446
+classicalMusic,5s Post,O2,Beta,-2.4429823772632866
+classicalMusic,5s Post,F7,Beta,-7.26312302657563
+classicalMusic,5s Post,F8,Beta,5.724118029648445
+classicalMusic,5s Post,T7,Beta,9.21298791477669
+classicalMusic,5s Post,T8,Beta,-5.178759769062198
+classicalMusic,5s Post,P7,Beta,7.141011966855119
+classicalMusic,5s Post,P8,Beta,-2.0190331636711356
+classicalMusic,5s Post,Fz,Beta,5.945516825942976
+classicalMusic,5s Post,Cz,Beta,19.528014710981775
+classicalMusic,5s Post,Pz,Beta,43.88633837188068
+classicalMusic,5s Post,Oz,Beta,3.264974138046045
+classicalMusic,5s Post,FC1,Beta,-7.855122046325112
+classicalMusic,5s Post,FC2,Beta,15.844228252277585
+classicalMusic,5s Post,CP1,Beta,5.821351888491065
+classicalMusic,5s Post,CP2,Beta,4.438028153334564
+classicalMusic,5s Post,FC5,Beta,6.477580043358982
+classicalMusic,5s Post,FC6,Beta,-0.2229365549418203
+classicalMusic,5s Post,CP5,Beta,-1.4745950179488836
+classicalMusic,5s Post,CP6,Beta,-8.025436149283122
+classicalMusic,5s Post,TP9,Beta,18.896936805942143
+classicalMusic,5s Post,TP10,Beta,2.3348625930723017
+classicalMusic,5s Post,POz,Beta,2.8519586527952776
+genMusic01,Onset,Fp1,Beta,9.828359937471747
+genMusic01,Onset,Fp2,Beta,10.949553116804138
+genMusic01,Onset,F3,Beta,16.92781564030576
+genMusic01,Onset,F4,Beta,41.95251116466246
+genMusic01,Onset,C3,Beta,27.35439417451455
+genMusic01,Onset,C4,Beta,72.95379527632487
+genMusic01,Onset,P3,Beta,25.032300135860222
+genMusic01,Onset,P4,Beta,44.09960407010453
+genMusic01,Onset,O1,Beta,30.767689272266832
+genMusic01,Onset,O2,Beta,1.7701713310478662
+genMusic01,Onset,F7,Beta,26.664916095401892
+genMusic01,Onset,F8,Beta,66.06010256685424
+genMusic01,Onset,T7,Beta,43.32401601068182
+genMusic01,Onset,T8,Beta,52.336464657010026
+genMusic01,Onset,P7,Beta,66.5862912215978
+genMusic01,Onset,P8,Beta,10.185529132718953
+genMusic01,Onset,Fz,Beta,21.674515667258532
+genMusic01,Onset,Cz,Beta,26.22176654665268
+genMusic01,Onset,Pz,Beta,10.301430546469739
+genMusic01,Onset,Oz,Beta,0.2927459264511665
+genMusic01,Onset,FC1,Beta,23.683188334574808
+genMusic01,Onset,FC2,Beta,28.18281211668546
+genMusic01,Onset,CP1,Beta,1.3994290006225327
+genMusic01,Onset,CP2,Beta,76.10136940854304
+genMusic01,Onset,FC5,Beta,57.883764024842364
+genMusic01,Onset,FC6,Beta,70.58345971454105
+genMusic01,Onset,CP5,Beta,49.21562221382161
+genMusic01,Onset,CP6,Beta,47.65100558413002
+genMusic01,Onset,TP9,Beta,58.12078354086945
+genMusic01,Onset,TP10,Beta,17.003247980999497
+genMusic01,Onset,POz,Beta,4.76184607337834
+genMusic01,2s Post,Fp1,Beta,23.652703384531574
+genMusic01,2s Post,Fp2,Beta,3.9754609200990636
+genMusic01,2s Post,F3,Beta,92.79273806417466
+genMusic01,2s Post,F4,Beta,31.71800203438486
+genMusic01,2s Post,C3,Beta,34.41250108062236
+genMusic01,2s Post,C4,Beta,31.56914719586729
+genMusic01,2s Post,P3,Beta,0.38968214483624597
+genMusic01,2s Post,P4,Beta,-5.21419083081031
+genMusic01,2s Post,O1,Beta,25.992715264794782
+genMusic01,2s Post,O2,Beta,6.806014388747009
+genMusic01,2s Post,F7,Beta,7.380833468545138
+genMusic01,2s Post,F8,Beta,33.361247437867156
+genMusic01,2s Post,T7,Beta,28.43467988397941
+genMusic01,2s Post,T8,Beta,19.98141451657525
+genMusic01,2s Post,P7,Beta,23.90949278202089
+genMusic01,2s Post,P8,Beta,3.9098835277856985
+genMusic01,2s Post,Fz,Beta,25.48035405386009
+genMusic01,2s Post,Cz,Beta,22.452467823113007
+genMusic01,2s Post,Pz,Beta,-4.1272907646716
+genMusic01,2s Post,Oz,Beta,6.99982634647373
+genMusic01,2s Post,FC1,Beta,20.575837487076925
+genMusic01,2s Post,FC2,Beta,37.822911522164176
+genMusic01,2s Post,CP1,Beta,-5.885486209979975
+genMusic01,2s Post,CP2,Beta,51.98942976508208
+genMusic01,2s Post,FC5,Beta,31.621573755672646
+genMusic01,2s Post,FC6,Beta,76.1118792694995
+genMusic01,2s Post,CP5,Beta,34.79412704999089
+genMusic01,2s Post,CP6,Beta,40.77139826398251
+genMusic01,2s Post,TP9,Beta,44.59365152762412
+genMusic01,2s Post,TP10,Beta,14.427310251381705
+genMusic01,2s Post,POz,Beta,47.92088411106768
+genMusic01,5s Post,Fp1,Beta,47.33704607508215
+genMusic01,5s Post,Fp2,Beta,-1.7601712057491001
+genMusic01,5s Post,F3,Beta,54.20924730490868
+genMusic01,5s Post,F4,Beta,0.7080578360070788
+genMusic01,5s Post,C3,Beta,-5.596649714702638
+genMusic01,5s Post,C4,Beta,-15.42069459895033
+genMusic01,5s Post,P3,Beta,-18.49847296335099
+genMusic01,5s Post,P4,Beta,-14.090694941632842
+genMusic01,5s Post,O1,Beta,-0.3668267360483133
+genMusic01,5s Post,O2,Beta,-6.267174911240533
+genMusic01,5s Post,F7,Beta,12.604011399919521
+genMusic01,5s Post,F8,Beta,-3.864927512559685
+genMusic01,5s Post,T7,Beta,7.071709341677586
+genMusic01,5s Post,T8,Beta,96.48285984260264
+genMusic01,5s Post,P7,Beta,0.8795046889932592
+genMusic01,5s Post,P8,Beta,-12.80752315549937
+genMusic01,5s Post,Fz,Beta,18.642733281038566
+genMusic01,5s Post,Cz,Beta,25.974073148136846
+genMusic01,5s Post,Pz,Beta,-8.592327571537561
+genMusic01,5s Post,Oz,Beta,-5.031693771092198
+genMusic01,5s Post,FC1,Beta,18.453314394145178
+genMusic01,5s Post,FC2,Beta,36.21313060027973
+genMusic01,5s Post,CP1,Beta,-12.33179186816669
+genMusic01,5s Post,CP2,Beta,-9.41482420956374
+genMusic01,5s Post,FC5,Beta,14.928136576785047
+genMusic01,5s Post,FC6,Beta,-1.031373867955903
+genMusic01,5s Post,CP5,Beta,-15.572178727078168
+genMusic01,5s Post,CP6,Beta,-14.212513331538698
+genMusic01,5s Post,TP9,Beta,104.21668201024882
+genMusic01,5s Post,TP10,Beta,15.894188970874747
+genMusic01,5s Post,POz,Beta,1.9301226177282622
+genMusic02,Onset,Fp1,Beta,-9.035540569086153
+genMusic02,Onset,Fp2,Beta,-5.873548342146462
+genMusic02,Onset,F3,Beta,-19.012123141323563
+genMusic02,Onset,F4,Beta,2.553655915394053
+genMusic02,Onset,C3,Beta,-14.686002295505382
+genMusic02,Onset,C4,Beta,11.707936326606578
+genMusic02,Onset,P3,Beta,5.804392473269137
+genMusic02,Onset,P4,Beta,-3.34647966464908
+genMusic02,Onset,O1,Beta,19.80227048549554
+genMusic02,Onset,O2,Beta,-4.298946900317249
+genMusic02,Onset,F7,Beta,-12.704914257304143
+genMusic02,Onset,F8,Beta,5.360575528780752
+genMusic02,Onset,T7,Beta,-6.805679397041434
+genMusic02,Onset,T8,Beta,-13.342165646058044
+genMusic02,Onset,P7,Beta,10.947337054354144
+genMusic02,Onset,P8,Beta,-1.9077812459147312
+genMusic02,Onset,Fz,Beta,-7.885381678689239
+genMusic02,Onset,Cz,Beta,-3.642775228371011
+genMusic02,Onset,Pz,Beta,0.020719820208674813
+genMusic02,Onset,Oz,Beta,2.0215855730081476
+genMusic02,Onset,FC1,Beta,-10.174822072316143
+genMusic02,Onset,FC2,Beta,-8.431661671885001
+genMusic02,Onset,CP1,Beta,-15.00784638699432
+genMusic02,Onset,CP2,Beta,5.420258848273671
+genMusic02,Onset,FC5,Beta,22.782541605635135
+genMusic02,Onset,FC6,Beta,-3.254292311164506
+genMusic02,Onset,CP5,Beta,1.0248834132944464
+genMusic02,Onset,CP6,Beta,5.024064071041136
+genMusic02,Onset,TP9,Beta,26.50435228913153
+genMusic02,Onset,TP10,Beta,50.82816794114931
+genMusic02,Onset,POz,Beta,32.156780742253915
+genMusic02,2s Post,Fp1,Beta,-6.681326691312063
+genMusic02,2s Post,Fp2,Beta,-12.49952983559184
+genMusic02,2s Post,F3,Beta,-12.061293694409606
+genMusic02,2s Post,F4,Beta,8.44752496844994
+genMusic02,2s Post,C3,Beta,-8.046302098754389
+genMusic02,2s Post,C4,Beta,7.7832933718378365
+genMusic02,2s Post,P3,Beta,13.864555790945778
+genMusic02,2s Post,P4,Beta,12.006760542668868
+genMusic02,2s Post,O1,Beta,29.88562236242549
+genMusic02,2s Post,O2,Beta,9.917642276539198
+genMusic02,2s Post,F7,Beta,-11.443862200873685
+genMusic02,2s Post,F8,Beta,3.755280703033593
+genMusic02,2s Post,T7,Beta,-1.5343320686431332
+genMusic02,2s Post,T8,Beta,-2.2572482980856066
+genMusic02,2s Post,P7,Beta,32.34115803223544
+genMusic02,2s Post,P8,Beta,8.31640124035818
+genMusic02,2s Post,Fz,Beta,0.49769563960377083
+genMusic02,2s Post,Cz,Beta,10.879206518204986
+genMusic02,2s Post,Pz,Beta,6.629969282173896
+genMusic02,2s Post,Oz,Beta,16.29529557222118
+genMusic02,2s Post,FC1,Beta,7.192593449619458
+genMusic02,2s Post,FC2,Beta,-12.357632392721033
+genMusic02,2s Post,CP1,Beta,-7.166450609242394
+genMusic02,2s Post,CP2,Beta,19.820296554913764
+genMusic02,2s Post,FC5,Beta,0.08187977109795004
+genMusic02,2s Post,FC6,Beta,-4.269038166204278
+genMusic02,2s Post,CP5,Beta,15.433854576115209
+genMusic02,2s Post,CP6,Beta,5.058302200242508
+genMusic02,2s Post,TP9,Beta,28.84932572470346
+genMusic02,2s Post,TP10,Beta,10.38834176312354
+genMusic02,2s Post,POz,Beta,32.683148936847594
+genMusic02,5s Post,Fp1,Beta,-7.255100159787127
+genMusic02,5s Post,Fp2,Beta,-8.40926469854119
+genMusic02,5s Post,F3,Beta,2.7683968069184752
+genMusic02,5s Post,F4,Beta,-1.9051451460800222
+genMusic02,5s Post,C3,Beta,-6.8008210310954045
+genMusic02,5s Post,C4,Beta,3.317545227155533
+genMusic02,5s Post,P3,Beta,9.526993292254096
+genMusic02,5s Post,P4,Beta,1.0455715886220989
+genMusic02,5s Post,O1,Beta,7.937801714529089
+genMusic02,5s Post,O2,Beta,-16.079850108086852
+genMusic02,5s Post,F7,Beta,-9.039913988403207
+genMusic02,5s Post,F8,Beta,-7.079887113122136
+genMusic02,5s Post,T7,Beta,-6.865287404869062
+genMusic02,5s Post,T8,Beta,-18.328214830472042
+genMusic02,5s Post,P7,Beta,-0.6862005776988412
+genMusic02,5s Post,P8,Beta,-11.173458264484399
+genMusic02,5s Post,Fz,Beta,-8.009987889484501
+genMusic02,5s Post,Cz,Beta,-7.670671156067828
+genMusic02,5s Post,Pz,Beta,6.993035378217168
+genMusic02,5s Post,Oz,Beta,-12.386615948543279
+genMusic02,5s Post,FC1,Beta,0.862299366496626
+genMusic02,5s Post,FC2,Beta,-16.26113703183983
+genMusic02,5s Post,CP1,Beta,-13.096837423687699
+genMusic02,5s Post,CP2,Beta,0.19666792223242802
+genMusic02,5s Post,FC5,Beta,15.58169627515027
+genMusic02,5s Post,FC6,Beta,-6.963885694920173
+genMusic02,5s Post,CP5,Beta,-0.4031364530954872
+genMusic02,5s Post,CP6,Beta,-5.581879712029454
+genMusic02,5s Post,TP9,Beta,11.17547715137935
+genMusic02,5s Post,TP10,Beta,-9.280400090909488
+genMusic02,5s Post,POz,Beta,15.124534204427416
+genMusic03,Onset,Fp1,Beta,2.5574562966224073
+genMusic03,Onset,Fp2,Beta,19.084088110787714
+genMusic03,Onset,F3,Beta,1.6252924287929646
+genMusic03,Onset,F4,Beta,24.169039407160298
+genMusic03,Onset,C3,Beta,11.731057259400846
+genMusic03,Onset,C4,Beta,15.039287508051192
+genMusic03,Onset,P3,Beta,26.70311924363052
+genMusic03,Onset,P4,Beta,15.883052778246055
+genMusic03,Onset,O1,Beta,36.482442636239185
+genMusic03,Onset,O2,Beta,24.242560569686248
+genMusic03,Onset,F7,Beta,9.459661237669724
+genMusic03,Onset,F8,Beta,26.141691193830788
+genMusic03,Onset,T7,Beta,34.820794886880215
+genMusic03,Onset,T8,Beta,18.26180015708411
+genMusic03,Onset,P7,Beta,40.538778970996695
+genMusic03,Onset,P8,Beta,27.69802955955002
+genMusic03,Onset,Fz,Beta,28.382217515002896
+genMusic03,Onset,Cz,Beta,12.23873696238471
+genMusic03,Onset,Pz,Beta,26.902981435335708
+genMusic03,Onset,Oz,Beta,24.677080631487197
+genMusic03,Onset,FC1,Beta,7.430458796652561
+genMusic03,Onset,FC2,Beta,19.224474141093502
+genMusic03,Onset,CP1,Beta,19.277321943566427
+genMusic03,Onset,CP2,Beta,18.86563678469576
+genMusic03,Onset,FC5,Beta,-4.805391546909167
+genMusic03,Onset,FC6,Beta,17.551070762607733
+genMusic03,Onset,CP5,Beta,25.193727096528466
+genMusic03,Onset,CP6,Beta,21.89040557396573
+genMusic03,Onset,TP9,Beta,60.27942523201801
+genMusic03,Onset,TP10,Beta,27.501517846962507
+genMusic03,Onset,POz,Beta,26.928303657462916
+genMusic03,2s Post,Fp1,Beta,35.98875664856933
+genMusic03,2s Post,Fp2,Beta,47.8920279517164
+genMusic03,2s Post,F3,Beta,48.72303390960094
+genMusic03,2s Post,F4,Beta,30.54465040026676
+genMusic03,2s Post,C3,Beta,24.849732581147517
+genMusic03,2s Post,C4,Beta,47.313489869996765
+genMusic03,2s Post,P3,Beta,39.940147798013435
+genMusic03,2s Post,P4,Beta,63.24377023239757
+genMusic03,2s Post,O1,Beta,53.241167544784076
+genMusic03,2s Post,O2,Beta,51.25048701379551
+genMusic03,2s Post,F7,Beta,31.515735094899753
+genMusic03,2s Post,F8,Beta,18.110349572531156
+genMusic03,2s Post,T7,Beta,53.70670296334731
+genMusic03,2s Post,T8,Beta,33.02017846891671
+genMusic03,2s Post,P7,Beta,43.05838166773251
+genMusic03,2s Post,P8,Beta,34.61286468967757
+genMusic03,2s Post,Fz,Beta,41.56751052293987
+genMusic03,2s Post,Cz,Beta,41.47760273769855
+genMusic03,2s Post,Pz,Beta,83.04390572517559
+genMusic03,2s Post,Oz,Beta,68.41013934484029
+genMusic03,2s Post,FC1,Beta,34.271984596679694
+genMusic03,2s Post,FC2,Beta,26.838777711412394
+genMusic03,2s Post,CP1,Beta,64.32997884460183
+genMusic03,2s Post,CP2,Beta,70.76680683966478
+genMusic03,2s Post,FC5,Beta,32.92649635119918
+genMusic03,2s Post,FC6,Beta,22.46562196622627
+genMusic03,2s Post,CP5,Beta,39.97869912372537
+genMusic03,2s Post,CP6,Beta,46.82062582133038
+genMusic03,2s Post,TP9,Beta,52.28891393215943
+genMusic03,2s Post,TP10,Beta,17.48455325241204
+genMusic03,2s Post,POz,Beta,93.9339932505776
+genMusic03,5s Post,Fp1,Beta,25.956184766908134
+genMusic03,5s Post,Fp2,Beta,21.44944210646215
+genMusic03,5s Post,F3,Beta,26.360338454047664
+genMusic03,5s Post,F4,Beta,6.041645593831825
+genMusic03,5s Post,C3,Beta,1.374809955396761
+genMusic03,5s Post,C4,Beta,30.697043807682434
+genMusic03,5s Post,P3,Beta,24.311984630436168
+genMusic03,5s Post,P4,Beta,42.14491573950354
+genMusic03,5s Post,O1,Beta,20.971296781857898
+genMusic03,5s Post,O2,Beta,25.395461975991577
+genMusic03,5s Post,F7,Beta,17.726536540316957
+genMusic03,5s Post,F8,Beta,-2.395275693591083
+genMusic03,5s Post,T7,Beta,48.981828425773614
+genMusic03,5s Post,T8,Beta,21.234251240292025
+genMusic03,5s Post,P7,Beta,23.33287983305959
+genMusic03,5s Post,P8,Beta,7.365112687287025
+genMusic03,5s Post,Fz,Beta,19.406224574702694
+genMusic03,5s Post,Cz,Beta,20.173900682223262
+genMusic03,5s Post,Pz,Beta,40.316327126161816
+genMusic03,5s Post,Oz,Beta,27.964496970988048
+genMusic03,5s Post,FC1,Beta,-3.4155236486021794
+genMusic03,5s Post,FC2,Beta,9.28065564851832
+genMusic03,5s Post,CP1,Beta,32.13807356656067
+genMusic03,5s Post,CP2,Beta,64.65782500143038
+genMusic03,5s Post,FC5,Beta,7.247270977770762
+genMusic03,5s Post,FC6,Beta,8.901701566784336
+genMusic03,5s Post,CP5,Beta,29.304355271229372
+genMusic03,5s Post,CP6,Beta,23.885488593960005
+genMusic03,5s Post,TP9,Beta,28.96249135274427
+genMusic03,5s Post,TP10,Beta,22.932783924756308
+genMusic03,5s Post,POz,Beta,54.82947679073648

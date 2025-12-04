@@ -833,6 +833,140 @@ def save_tab6_arousal_valence():
     summary_path = os.path.join(RESULTS_DIR, "tab6_arousal_valence_summary.csv")
     summary_df.to_csv(summary_path, index=False)
     print(f"  Saved subject/task summary to {summary_path}")
+    
+    
+# ==============================================================
+# TAB 7 – Delta / Alpha / Beta evolution topomaps
+# ==============================================================
+
+# Shared time windows for band evolution (same as your separate scripts)
+BAND_EVOLUTION_WINDOWS = {
+    "Baseline": (-2.0, 0.0),
+    "Onset": (0.0, 2.0),
+    "2s Post": (2.0, 4.0),
+    "5s Post": (5.0, 7.0),
+}
+
+BAND_EVOLUTION_FREQS = {
+    "Delta": (1, 4),
+    "Alpha": (8, 13),
+    "Beta": (13, 30),
+}
+
+
+def collect_band_evolution_time_course(root, subjects, tasks, time_windows, band_freqs):
+    """
+    Collect per-subject, per-task, per-window band powers for all bands
+    needed for the evolution topomaps.
+    Returns:
+      band_time_powers[band][task][window] -> list of arrays (subjects x channels)
+      info: MNE Info with channel layout
+    """
+    band_time_powers = {
+        band: {task: {w: [] for w in time_windows} for task in tasks}
+        for band in band_freqs.keys()
+    }
+    info = None
+
+    for subject in subjects:
+        for task in tasks:
+            raw = load_preprocessed(root, subject, task)
+            if raw is None:
+                continue
+
+            events_df = load_events(root, subject, task)
+            onset_time = find_music_onset(events_df, raw, analysis_duration=7.0)
+
+            eeg_chs = [c for c in raw.ch_names if c not in EXCLUDE_CHANNELS]
+            raw_eeg = raw.copy().pick_channels(eeg_chs)
+
+            # set montage once
+            if info is None:
+                try:
+                    montage = mne.channels.make_standard_montage("standard_1020")
+                    raw_eeg.set_montage(montage, on_missing="ignore")
+                except Exception:
+                    pass
+                info = raw_eeg.info
+
+            for win_name, (tmin_rel, tmax_rel) in time_windows.items():
+                abs_tmin = onset_time + tmin_rel
+                abs_tmax = onset_time + tmax_rel
+                if abs_tmin < 0 or abs_tmax > raw_eeg.times[-1]:
+                    continue
+
+                for band_name, (fmin, fmax) in band_freqs.items():
+                    try:
+                        pw = compute_band_power(raw_eeg, abs_tmin, abs_tmax, fmin, fmax)
+                        band_time_powers[band_name][task][win_name].append(pw)
+                    except Exception:
+                        continue
+
+    return band_time_powers, info
+
+
+def save_tab7_band_evolution_topomaps():
+    """
+    Save percent-change-from-baseline topomap values for Delta/Alpha/Beta
+    into one tidy CSV: band_evolution_topomaps.csv
+    """
+    print("TAB 7: Computing Delta/Alpha/Beta evolution topomaps...")
+    subjects = find_subjects(bids_root)
+    tasks = list(TASK_OPTIONS.values())
+
+    band_time_powers, info = collect_band_evolution_time_course(
+        bids_root, subjects, tasks, BAND_EVOLUTION_WINDOWS, BAND_EVOLUTION_FREQS
+    )
+    if info is None:
+        print("  No data; skipping Tab 7.")
+        return
+
+    ch_names = info["ch_names"]
+    baseline_name = "Baseline"
+    win_labels = ["Onset", "2s Post", "5s Post"]
+
+    rows = []
+
+    for band_name in BAND_EVOLUTION_FREQS.keys():
+        for task in tasks:
+            base_list = band_time_powers[band_name][task][baseline_name]
+            if not base_list:
+                continue
+
+            base_arr = np.array(base_list)  # subjects x channels
+            # avoid divide-by-zero
+            base_arr = np.where(base_arr == 0, np.nan, base_arr)
+
+            for win in win_labels:
+                curr_list = band_time_powers[band_name][task][win]
+                if not curr_list:
+                    continue
+                curr_arr = np.array(curr_list)
+
+                # percent change from baseline
+                try:
+                    pct = ((curr_arr - base_arr) / base_arr) * 100.0  # subj x ch
+                except Exception:
+                    continue
+
+                avg = np.nanmean(pct, axis=0)  # channel-wise mean across subjects
+
+                for ch_name, val in zip(ch_names, avg):
+                    rows.append(
+                        {
+                            "task_bids": task,
+                            "window": win,
+                            "channel": ch_name,
+                            "band": band_name,
+                            "pct_change": float(val),
+                        }
+                    )
+
+    df = pd.DataFrame(rows)
+    out_path = os.path.join(RESULTS_DIR, "band_evolution_topomaps.csv")
+    df.to_csv(out_path, index=False)
+    print(f"  Saved {out_path}")
+
 
 
 
@@ -840,14 +974,15 @@ def save_tab6_arousal_valence():
 # MAIN
 # ==============================================================
 
-
 if __name__ == "__main__":
     print("Precomputing all tab outputs from full ds002725 ...")
-    save_tab1_subject_band_powers()
-    save_tab2_group_alpha_evolution()
-    save_tab3_gender_analysis()
-    save_tab4_theta_timecourse()
-    save_tab5_frontal_asymmetry()
-    save_tab6_arousal_valence()  # <-- NEW
+    # save_tab1_subject_band_powers()
+    # save_tab2_group_alpha_evolution()
+    # save_tab3_gender_analysis()
+    # save_tab4_theta_timecourse()
+    # save_tab5_frontal_asymmetry()
+    # save_tab6_arousal_valence()
+    save_tab7_band_evolution_topomaps()  # <-- NEW
     print("Done. All outputs written to precomputed_results/")
+
 
