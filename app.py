@@ -9,6 +9,8 @@ import streamlit as st
 import plotly.express as px
 from streamlit_extras.metric_cards import style_metric_cards
 from streamlit_extras.colored_header import colored_header
+import plotly.express as px
+import plotly.graph_objects as go
 
 # ========================
 # PAGE CONFIG & THEME
@@ -226,6 +228,10 @@ style_metric_cards(
 tab1, tab3, tab4, tab5, tab6 = st.tabs(
     ["Individual Participant", "Gender Analysis", "Theta Time Course", "Frontal Asymmetry", "Arousal vs Valence"]
 )
+
+# tab1, tab3, tab5, tab6 = st.tabs(
+#     ["Individual Participant", "Gender Analysis", "Frontal Asymmetry", "Arousal vs Valence"]
+# )
 
 # =====================================================
 # TAB 1 – Individual Participant Topomaps
@@ -725,9 +731,10 @@ with tab3:
 
     band_df, ratio_df = load_tab3_data()
 
-
-    sub_tab1, sub_tab2 = st.tabs(["Band Power", "Beta/Alpha Ratio"])
-
+    sub_tab1, sub_tab2, sub_tab3 = st.tabs(
+        ["Band Power", "Beta/Alpha Ratio", "Gender Overview"]
+    )
+    
     # ---------- Band Power tab ----------
     with sub_tab1:
         # 1) Mean band power by gender (bar)
@@ -914,29 +921,177 @@ with tab3:
         with col_d:
             st.plotly_chart(fig4, use_container_width=True)
             
-        # ---------- descriptive stats ----------
-    # Band power stats: gender × band
-    band_stats = (
-        band_df.groupby(["gender", "band"])["power"]
-        .agg(N="count", Mean="mean", SD="std")
-        .reset_index()
-    )
+            
+    with sub_tab3:   
+        # ---- prepare data ----
+        band_order = ["Delta", "Alpha", "Beta"]
+        band_df["Band"] = pd.Categorical(band_df["band"],
+                                        categories=band_order,
+                                        ordered=True)
 
-    # Beta/Alpha ratio stats: gender (overall)
-    ratio_stats = (
-        ratio_df.groupby("gender")["beta_alpha_ratio"]
-        .agg(N="count", Mean="mean", SD="std")
-        .reset_index()
-    )
+        # use the already-present task_label column for pretty names
+        # (no task_key / mapping needed)
+        ratio_df["TaskShort"] = ratio_df["task_label"]
+        band_df["TaskShort"] = band_df["task_label"]
 
-    st.markdown("#### Descriptive statistics")
-    col_stats1, col_stats2 = st.columns(2)
-    with col_stats1:
-        st.markdown("**Band power by gender and band**")
-        st.dataframe(band_stats, use_container_width=True)
-    with col_stats2:
-        st.markdown("**Beta/Alpha ratio by gender**")
-        st.dataframe(ratio_stats, use_container_width=True)
+        genders = sorted(band_df["gender"].dropna().unique())  # ['F','M']
+
+        # ==========================================================
+        # Figure A – Brain Wave Power by Gender (all tasks combined)
+        # ==========================================================
+        # make sure Band is an ordered categorical with all three levels
+        band_order = ["Delta", "Theta", "Alpha", "Beta"]
+
+        # restrict to bands that are actually present
+        available = set(band_df["band"].unique())
+        band_order = [b for b in band_order if b in available]
+
+        band_df["Band"] = pd.Categorical(
+            band_df["band"], categories=band_order, ordered=True
+        )
+
+        genders = sorted(band_df["gender"].dropna().unique())  # ['F','M']
+
+        # aggregate, but do NOT assume every (Band,gender) pair exists
+        agg_power = (
+            band_df.groupby(["Band", "gender"], observed=False)["power"]
+            .agg(mean="mean", sem=lambda x: x.std(ddof=1) / max(len(x), 1))
+            .reset_index()
+        )
+
+        colors_by_band_gender = {
+            ("Delta", "M"): "#ADD8E6",  # light blue
+            ("Delta", "F"): "#00008B",  # dark blue
+
+            ("Theta", "M"): "#DDA0DD",  # light purple
+            ("Theta", "F"): "#800080",  # dark purple
+
+            ("Alpha", "M"): "#90EE90",  # light green
+            ("Alpha", "F"): "#006400",  # dark green
+            ("Beta",  "M"): "#FFB6C1",  # light red/pink
+            ("Beta",  "F"): "#8B0000",  # dark red
+        }
+
+
+        fig_power = go.Figure()
+
+        for gender in genders:
+            means, sems, colors = [], [], []
+            for band in band_order:
+                row = agg_power[(agg_power["Band"] == band) & (agg_power["gender"] == gender)]
+                if row.empty:
+                    # no data for this (band, gender); still append a 0 so bar shows axis category
+                    means.append(0.0)
+                    sems.append(0.0)
+                else:
+                    means.append(row["mean"].iloc[0])
+                    sems.append(row["sem"].iloc[0])
+                colors.append(colors_by_band_gender.get((band, gender), "gray"))
+
+            fig_power.add_trace(
+                go.Bar(
+                    x=band_order,
+                    y=means,
+                    name=gender,
+                    marker_color=colors,
+                    error_y=dict(type="data", array=sems, visible=True, thickness=1.5, width=3),
+                )
+            )
+
+        fig_power.update_layout(
+            barmode="group",
+            title_text="Brain Wave Power by Gender<br><sup>All Tasks Combined</sup>",
+            xaxis_title="Frequency Band",
+            yaxis_title="Power (μV²/Hz)",
+            plot_bgcolor="#111111",
+            paper_bgcolor="#000000",
+            font=dict(color="white"),
+            legend=dict(
+                title="Gender",
+                bgcolor="#111111",
+                bordercolor="#444444",
+                borderwidth=1,
+                font=dict(color="white"),
+                title_font=dict(color="white"),
+            ),
+            xaxis=dict(showgrid=True, gridcolor="#333333", zeroline=False),
+            yaxis=dict(showgrid=True, gridcolor="#333333", zeroline=False),
+            title=dict(x=0.5, xanchor="center", font=dict(color="white")),
+        )
+
+
+
+        # ==========================================================
+        # Figure B – Cognitive Engagement by Music Type (Beta/Alpha)
+        # ==========================================================
+        agg_ratio = (
+            ratio_df.groupby(["TaskShort", "gender"])["beta_alpha_ratio"]
+            .agg(mean="mean", sem=lambda x: x.std(ddof=1) / (len(x) ** 0.5))
+            .reset_index()
+        )
+
+        task_labels = list(agg_ratio["TaskShort"].dropna().unique())
+        gender_colors = {"M": "#00FFFF", "F": "#FF00FF"}
+
+        fig_ratio = go.Figure()
+        for gender in genders:
+            sub = agg_ratio[agg_ratio["gender"] == gender].set_index("TaskShort")
+            means = [sub.loc[t, "mean"] if t in sub.index else None for t in task_labels]
+            sems = [sub.loc[t, "sem"] if t in sub.index else None for t in task_labels]
+
+            fig_ratio.add_trace(
+                go.Bar(
+                    x=task_labels,
+                    y=means,
+                    name=gender,
+                    marker_color=gender_colors.get(gender, "gray"),
+                    error_y=dict(type="data", array=sems, visible=True, thickness=1.5, width=3),
+                )
+            )
+
+        fig_ratio.add_hline(y=1.0, line_dash="dash", line_color="gray", opacity=0.6)
+
+        fig_ratio.update_layout(
+            barmode="group",
+            title_text="Cognitive Engagement by Music Type<br><sup>Beta/Alpha Ratio</sup>",
+            xaxis_title="Music Type",
+            yaxis_title="Beta/Alpha Ratio",
+            plot_bgcolor="#111111",
+            paper_bgcolor="#000000",
+            font=dict(color="white"),
+            legend=dict(
+                title="Gender",
+                bgcolor="#111111",
+                bordercolor="#444444",
+                borderwidth=1,
+                font=dict(color="white"),
+                title_font=dict(color="white"),
+            ),
+            xaxis=dict(
+                tickangle=15,
+                showgrid=True,
+                gridcolor="#333333",
+                zeroline=False,
+                tickfont=dict(color="white"),
+                titlefont=dict(color="white"),
+            ),
+            yaxis=dict(
+                showgrid=True,
+                gridcolor="#333333",
+                zeroline=False,
+                tickfont=dict(color="white"),
+                titlefont=dict(color="white"),
+            ),
+            title=dict(x=0.5, xanchor="center", font=dict(color="white")),
+        )
+
+
+        col1, col2 = st.columns(2)
+        with col1:
+            st.plotly_chart(fig_power, use_container_width=True)
+        with col2:
+            st.plotly_chart(fig_ratio, use_container_width=True)
+
 
 
 
@@ -944,11 +1099,12 @@ with tab3:
 # =====================================================
 # TAB 5 – Frontal Alpha Asymmetry
 # =====================================================
+
 asymmetry_text = """
 
-
-This figure shows how frontal alpha asymmetry, a brain measure linked to emotional approach and withdrawal, changes over time as people listen to different types of music. Each row represents one participant, and each column shows a moment in time during the 60-second listening period. Green shades indicate more “approach-related” activity, which is often associated with positive emotion or engagement. Red shades indicate more “withdrawal-related” activity, which can reflect negative emotion, avoidance, or reduced engagement. By comparing classical music with three generative music pieces, the heatmaps highlight how consistently (or inconsistently) each music type elicits positive or negative emotional tendencies across individuals.
+This figure shows how frontal alpha asymmetry, a brain measure linked to emotional approach and withdrawal, changes over time as people listen to different types of music. Each row represents one participant, and each column shows a moment in time during the 60-second listening period. Green shades indicate more “approach-related” activity (higher right-minus-left asymmetry), which is often associated with positive emotion or engagement. Red shades indicate more “withdrawal-related” activity (lower or negative asymmetry), which can reflect negative emotion, avoidance, or reduced engagement.
 """
+
 with tab5:
     colored_header(
         label="Frontal Alpha Asymmetry (Classical Music)",
@@ -981,27 +1137,30 @@ with tab5:
         vmax = np.percentile(np.abs(mat), 95)
         vmin = -vmax
 
+        # High (positive) asymmetry = green, low/negative = red
         fig_heat = px.imshow(
             heat_df,
             x=times,
             y=participants,
             zmin=vmin,
             zmax=vmax,
-            color_continuous_scale="RdBu_r",
+            color_continuous_scale="RdYlGn",  # red -> yellow -> green
             aspect="auto",
             labels={
                 "x": "Time (s)",
                 "y": "Participant",
-                "color": "Asymmetry",
+                "color": "Asymmetry (R-L)",
             },
             title=f"{pair} Asymmetry (Right - Left)",
         )
+        fig_heat.update_traces(reversescale=True)  # so low = red, high = green
+
         fig_heat.update_layout(
             plot_bgcolor="#000000",
             paper_bgcolor="#000000",
             font=dict(color="white"),
             coloraxis_colorbar=dict(
-                title=dict(text="Asymmetry", font=dict(color="white")),
+                title=dict(text="Asymmetry (low → high)", font=dict(color="white")),
                 tickcolor="white",
                 tickfont=dict(color="white"),
             ),
@@ -1009,6 +1168,7 @@ with tab5:
         )
         st.plotly_chart(fig_heat, use_container_width=True)
 
+        # --- rest of your line plot code unchanged ---
         mean_asym = np.mean(mat, axis=0)
         std_asym = np.std(mat, axis=0)
         sem = std_asym / np.sqrt(mat.shape[0])
@@ -1054,12 +1214,13 @@ with tab5:
         )
         st.plotly_chart(fig_line, use_container_width=True)
 
-        st.markdown("### Summary statistics")
-        st.dataframe(
-            summary_df[summary_df["pair"] == pair],
-            use_container_width=True,
-            hide_index=True,
-        )
+
+        # st.markdown("### Summary statistics")
+        # st.dataframe(
+        #     summary_df[summary_df["pair"] == pair],
+        #     use_container_width=True,
+        #     hide_index=True,
+        # )
 
 # =====================================================
 # TAB 6 – Arousal vs Valence (interactive)
@@ -1199,5 +1360,5 @@ with tab6:
 
             st.plotly_chart(fig, use_container_width=True)
 
-        with st.expander("Show aggregated table (per participant & task)"):
-            st.dataframe(df_plot, use_container_width=True, hide_index=True)
+        # with st.expander("Show aggregated table (per participant & task)"):
+        #     st.dataframe(df_plot, use_container_width=True, hide_index=True)
