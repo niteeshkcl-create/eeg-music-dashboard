@@ -1053,39 +1053,43 @@ with tab3:
 
         fig_ratio.update_layout(
             barmode="group",
-            title_text="Cognitive Engagement by Music Type<br><sup>Beta/Alpha Ratio</sup>",
+            title={
+                "text": "Cognitive Engagement by Music Type<br><sup>Beta/Alpha Ratios</sup>",
+                "x": 0.5,
+                "xanchor": "center",
+                "font": {"color": "white"}
+            },
             xaxis_title="Music Type",
             yaxis_title="Beta/Alpha Ratio",
             plot_bgcolor="#111111",
             paper_bgcolor="#000000",
-            font=dict(color="white"),
-            legend=dict(
-                title="Gender",
-                bgcolor="#111111",
-                bordercolor="#444444",
-                borderwidth=1,
-                font=dict(color="white"),
-                title_font=dict(color="white"),
-            ),
-            xaxis=dict(
-                tickangle=15,
-                showgrid=True,
-                gridcolor="#333333",
-                zeroline=False,
-                tickfont=dict(color="white"),
-                titlefont=dict(color="white"),
-            ),
-            yaxis=dict(
-                showgrid=True,
-                gridcolor="#333333",
-                zeroline=False,
-                tickfont=dict(color="white"),
-                titlefont=dict(color="white"),
-            ),
-            title=dict(x=0.5, xanchor="center", font=dict(color="white")),
+            font={"color": "white"},
+            legend={
+                "title": {"text": "Gender"},
+                "bgcolor": "#111111",
+                "bordercolor": "#444444",
+                "borderwidth": 1,
+                "font": {"color": "white"},
+                "title_font": {"color": "white"}
+            },
+            xaxis={
+                "tickangle": 15,
+                "showgrid": True,
+                "gridcolor": "#333333",
+                "zeroline": False,
+                "tickfont": {"color": "white"},
+                "title_font": {"color": "white"}
+            },
+            yaxis={
+                "showgrid": True,
+                "gridcolor": "#333333",
+                "zeroline": False,
+                "tickfont": {"color": "white"},
+                "title_font": {"color": "white"}
+            }
         )
 
-
+        
         col1, col2 = st.columns(2)
         with col1:
             st.plotly_chart(fig_power, use_container_width=True)
