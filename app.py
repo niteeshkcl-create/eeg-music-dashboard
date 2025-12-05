@@ -187,12 +187,11 @@ def load_band_evolution_data():
 # ========================
 BRAIN_VIZ_URL = "https://mindtunes6.netlify.app/"
 
-# Top-left button row: clickable link button
 btn_col, _ = st.columns([1, 5])
 with btn_col:
     st.markdown(
         f"""
-        <a href="{BRAIN_VIZ_URL}" target="_blank">
+        <a href="{BRAIN_VIZ_URL}">
             <button style="
                 background: linear-gradient(90deg, #2D2F3D, #393C4E);
                 color: #FFFFFF;
@@ -208,6 +207,7 @@ with btn_col:
         """,
         unsafe_allow_html=True,
     )
+
         
         
 title_col1, title_col2 = st.columns([3, 1])
@@ -952,9 +952,11 @@ with tab3:
         # Figure A – Brain Wave Power by Gender (all tasks combined)
         # ==========================================================
         # make sure Band is an ordered categorical with all three levels
+        # ==========================================================
+        # Figure A – Brain Wave Power by Gender (all tasks combined)
+        # ==========================================================
         band_order = ["Delta", "Theta", "Alpha", "Beta"]
 
-        # restrict to bands that are actually present
         available = set(band_df["band"].unique())
         band_order = [b for b in band_order if b in available]
 
@@ -964,7 +966,6 @@ with tab3:
 
         genders = sorted(band_df["gender"].dropna().unique())  # ['F','M']
 
-        # aggregate, but do NOT assume every (Band,gender) pair exists
         agg_power = (
             band_df.groupby(["Band", "gender"], observed=False)["power"]
             .agg(mean="mean", sem=lambda x: x.std(ddof=1) / max(len(x), 1))
@@ -974,41 +975,42 @@ with tab3:
         colors_by_band_gender = {
             ("Delta", "M"): "#ADD8E6",  # light blue
             ("Delta", "F"): "#00008B",  # dark blue
-
             ("Theta", "M"): "#DDA0DD",  # light purple
             ("Theta", "F"): "#800080",  # dark purple
-
             ("Alpha", "M"): "#90EE90",  # light green
             ("Alpha", "F"): "#006400",  # dark green
             ("Beta",  "M"): "#FFB6C1",  # light red/pink
             ("Beta",  "F"): "#8B0000",  # dark red
         }
 
-
         fig_power = go.Figure()
 
-        for gender in genders:
-            means, sems, colors = [], [], []
-            for band in band_order:
+        # one trace per (band, gender) so legend shows 6 colors
+        for band in band_order:
+            for gender in genders:
                 row = agg_power[(agg_power["Band"] == band) & (agg_power["gender"] == gender)]
                 if row.empty:
-                    # no data for this (band, gender); still append a 0 so bar shows axis category
-                    means.append(0.0)
-                    sems.append(0.0)
+                    mean_val = 0.0
+                    sem_val = 0.0
                 else:
-                    means.append(row["mean"].iloc[0])
-                    sems.append(row["sem"].iloc[0])
-                colors.append(colors_by_band_gender.get((band, gender), "gray"))
+                    mean_val = row["mean"].iloc[0]
+                    sem_val = row["sem"].iloc[0]
 
-            fig_power.add_trace(
-                go.Bar(
-                    x=band_order,
-                    y=means,
-                    name=gender,
-                    marker_color=colors,
-                    error_y=dict(type="data", array=sems, visible=True, thickness=1.5, width=3),
+                fig_power.add_trace(
+                    go.Bar(
+                        x=[band],
+                        y=[mean_val],
+                        name=f"{gender} – {band}",
+                        marker_color=colors_by_band_gender.get((band, gender), "gray"),
+                        error_y=dict(
+                            type="data",
+                            array=[sem_val],
+                            visible=True,
+                            thickness=1.5,
+                            width=3,
+                        ),
+                    )
                 )
-            )
 
         fig_power.update_layout(
             barmode="group",
@@ -1019,7 +1021,7 @@ with tab3:
             paper_bgcolor="#000000",
             font=dict(color="white"),
             legend=dict(
-                title="Gender",
+                title="Band × Gender",
                 bgcolor="#111111",
                 bordercolor="#444444",
                 borderwidth=1,
@@ -1030,6 +1032,7 @@ with tab3:
             yaxis=dict(showgrid=True, gridcolor="#333333", zeroline=False),
             title=dict(x=0.5, xanchor="center", font=dict(color="white")),
         )
+
 
 
 
